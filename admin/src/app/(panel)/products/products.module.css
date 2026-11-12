@@ -1,0 +1,496 @@
+.headerActions {
+  width: min(100%, 430px);
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  gap: 18px;
+}
+
+.headerActions :global(.admin-muted) {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 26px;
+
+  margin-top: 28px;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    var(--admin-border);
+}
+
+.filterForm {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.searchField {
+  width: 280px;
+
+  display: grid;
+
+  gap: 7px;
+}
+
+.filterField {
+  width: 175px;
+
+  display: grid;
+
+  gap: 7px;
+}
+
+.searchField label,
+.filterField label {
+  color:
+    var(--admin-muted);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+.control {
+  width: 100%;
+
+  height: 40px;
+
+  border:
+    1px solid
+    var(--admin-border-strong);
+
+  border-radius: 0;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color:
+    var(--admin-text);
+
+  padding:
+    0 11px;
+
+  font-size: 11px;
+}
+
+.control:focus {
+  border-color:
+    var(--admin-text);
+}
+
+.control::placeholder {
+  color:
+    var(--admin-muted);
+}
+
+.filterActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.resultMeta {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 6px;
+
+  padding-bottom: 9px;
+
+  color:
+    var(--admin-muted);
+
+  font-size: 11px;
+}
+
+.resultMeta strong {
+  color:
+    var(--admin-text);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.productCell {
+  min-width: 190px;
+
+  display: grid;
+
+  gap: 4px;
+}
+
+.productName {
+  overflow: hidden;
+
+  max-width: 320px;
+
+  color:
+    var(--admin-text);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.productSlug {
+  overflow: hidden;
+
+  max-width: 320px;
+
+  color:
+    var(--admin-muted);
+
+  font-size: 10px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.productBrand {
+  color:
+    var(--admin-muted);
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+}
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 26px;
+
+  border:
+    1px solid
+    var(--admin-border);
+
+  padding:
+    0 8px;
+
+  color:
+    var(--admin-text);
+
+  font-size: 9px;
+
+  white-space: nowrap;
+}
+
+.numeric {
+  font-variant-numeric:
+    tabular-nums;
+
+  white-space: nowrap;
+}
+
+.inventory {
+  min-width: 120px;
+
+  display: grid;
+
+  gap: 3px;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+.inventory strong {
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.inventory span {
+  color:
+    var(--admin-muted);
+
+  font-size: 9px;
+
+  white-space: nowrap;
+}
+
+.pagination {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 18px;
+
+  margin-top: 22px;
+}
+
+.paginationLink,
+.paginationDisabled {
+  min-width: 70px;
+
+  padding: 8px 0;
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+.paginationLink {
+  color:
+    var(--admin-text);
+
+  border-bottom:
+    1px solid
+    var(--admin-border-strong);
+}
+
+.paginationLink:hover {
+  border-bottom-color:
+    var(--admin-text);
+}
+
+.paginationDisabled {
+  color:
+    var(--admin-muted);
+
+  opacity: .45;
+}
+
+.pageCount {
+  color:
+    var(--admin-muted);
+
+  font-size: 10px;
+}
+
+.errorState,
+.emptyState {
+  width: 100%;
+
+  margin-top: 28px;
+
+  border:
+    1px solid
+    var(--admin-border);
+
+  padding: 30px;
+}
+
+.errorState strong,
+.emptyState strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+}
+
+.errorState p,
+.emptyState p {
+  margin: 0;
+
+  color:
+    var(--admin-muted);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.errorState {
+  border-color:
+    rgba(139, 57, 45, .28);
+}
+
+@media (max-width: 1000px) {
+  .headerActions {
+    width: 100%;
+
+    align-items: flex-start;
+  }
+
+  .toolbar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .resultMeta {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .headerActions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .filterForm {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+  .searchField,
+  .filterField {
+    width: 100%;
+  }
+
+  .filterActions {
+    margin-top: 4px;
+  }
+
+  .pagination {
+    justify-content:
+      space-between;
+
+    gap: 10px;
+  }
+
+  .pageCount {
+    text-align: center;
+  }
+}
+
+/* TKB PRODUCT ROW ACTIONS */
+
+.actionsHead {
+  text-align:
+    right;
+}
+
+.actionsCell {
+  white-space:
+    nowrap;
+}
+
+.rowActions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-end;
+
+  gap:
+    8px;
+}
+
+@media (
+  max-width: 760px
+) {
+  .rowActions {
+    justify-content:
+      flex-start;
+  }
+}
+
+/* TKB PRODUCTS LIST RTL V1 START */
+
+/* Scope RTL to the products list only. */
+.productsPage {
+  direction: rtl;
+  text-align: right;
+}
+
+.productsPage :global(.admin-page-header) {
+  direction: rtl;
+  text-align: right;
+}
+
+.productsPage .headerActions :global(.admin-muted) {
+  text-align: right;
+}
+
+.productsPage .searchField label,
+.productsPage .filterField label {
+  text-align: right;
+}
+
+.productsPage .control {
+  text-align: right;
+}
+
+.productsPage .toolbar,
+.productsPage .filterForm,
+.productsPage .resultMeta {
+  direction: rtl;
+}
+
+/* RTL table with original columns and scroll behavior. */
+.productsPage :global(.admin-table-wrap),
+.productsPage :global(.admin-table) {
+  direction: rtl;
+}
+
+.productsPage :global(.admin-table) th,
+.productsPage :global(.admin-table) td {
+  text-align: right;
+}
+
+/* Latin slugs and numeric ranges remain readable. */
+.productsPage .productSlug {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+
+.productsPage .numeric {
+  direction: ltr;
+  text-align: right;
+}
+
+.productsPage .rowActions {
+  justify-content: flex-start;
+}
+
+.productsPage :global(.admin-pagination) {
+  direction: rtl;
+}
+
+.productsPage .pageCount {
+  text-align: center;
+}
+
+/* TKB PRODUCTS LIST RTL V1 END */

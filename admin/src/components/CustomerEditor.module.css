@@ -1,0 +1,152 @@
+.card {
+  padding: 22px;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .08);
+
+  border-radius: 18px;
+
+  background:
+    var(--tkb-wafer);
+
+  box-shadow:
+    var(--admin-shadow-soft);
+}
+
+.card h2 {
+  margin: 5px 0 8px;
+
+  font-size: 18px;
+}
+
+.help,
+.readOnly {
+  margin: 0;
+
+  color:
+    rgba(45, 63, 33, .58);
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+.form {
+  display: grid;
+
+  gap: 14px;
+
+  margin-top: 20px;
+}
+
+.twoColumns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+
+  gap: 7px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+
+  min-height: 42px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .09);
+
+  border-radius: 13px;
+
+  outline: none;
+
+  background: #fff;
+
+  color:
+    var(--tkb-ink);
+
+  padding: 0 13px;
+
+  font: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color:
+    rgba(45, 63, 33, .28);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(45, 63, 33, .05);
+}
+
+.saveButton {
+  min-height: 42px;
+
+  border:
+    0;
+
+  border-radius: 13px;
+
+  background:
+    var(--tkb-copper);
+
+  color: #fff;
+
+  padding: 0 16px;
+
+  font: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.saveButton:disabled {
+  opacity: .55;
+
+  cursor: default;
+}
+
+.error,
+.success {
+  margin: 0;
+
+  font-size: 10px;
+}
+
+.error {
+  color: #8d3f35;
+}
+
+.success {
+  color: #47754d;
+}
+
+@media (max-width: 640px) {
+  .twoColumns {
+    grid-template-columns:
+      1fr;
+  }
+}

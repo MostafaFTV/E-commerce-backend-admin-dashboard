@@ -1,0 +1,911 @@
+.metrics {
+  margin-top: 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        150px,
+        1fr
+      )
+    );
+
+  gap: 12px;
+}
+
+.metric,
+.panel,
+.activity,
+.revenueSection,
+.state {
+  border:
+    1px solid
+    rgba(54, 39, 28, .08);
+
+  border-radius:
+    18px;
+
+  background:
+    var(--tkb-wafer);
+
+  box-shadow:
+    var(--admin-shadow-soft);
+}
+
+.metric {
+  min-height: 126px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content:
+    space-between;
+
+  gap: 7px;
+
+  padding: 18px;
+}
+
+.metric > span,
+.revenueCard > span {
+  color:
+    rgba(45, 63, 33, .52);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: .07em;
+
+  text-transform: uppercase;
+}
+
+.metric > strong {
+  color:
+    var(--tkb-ink);
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  letter-spacing: -.04em;
+}
+
+.metric > small {
+  color:
+    rgba(45, 63, 33, .46);
+
+  font-size: 9px;
+}
+
+.charts {
+  margin-top: 14px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  align-items: start;
+
+  gap: 14px;
+}
+
+.panel,
+.activity,
+.revenueSection {
+  min-width: 0;
+
+  padding: 20px;
+}
+
+.sectionHeading {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.sectionHeading h2 {
+  margin: 3px 0 0;
+
+  color:
+    var(--tkb-ink);
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+.sectionHeading > span {
+  color:
+    rgba(45, 63, 33, .46);
+
+  font-size: 9px;
+
+  text-align: right;
+}
+
+.revenueSection {
+  width: fit-content;
+  max-width: 100%;
+
+  margin-top: 14px;
+
+  padding:
+    16px 18px;
+}
+
+.revenueSection .sectionHeading {
+  margin-bottom:
+    14px;
+}
+
+.revenueGrid {
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        145px,
+        190px
+      )
+    );
+}
+
+.revenueCard {
+  min-width:
+    145px;
+}
+
+.revenueGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        160px,
+        1fr
+      )
+    );
+
+  gap: 10px;
+}
+
+.revenueCard {
+  display: grid;
+
+  gap: 7px;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .07);
+
+  border-radius:
+    13px;
+
+  background:
+    var(--tkb-thatch);
+}
+
+.revenueCard strong {
+  color:
+    var(--tkb-ink);
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.inventoryNumbers {
+  margin-top: 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 8px;
+}
+
+.inventoryNumbers > div,
+.statusCards > div {
+  display: grid;
+
+  gap: 5px;
+
+  padding: 12px;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .07);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(
+      239,
+      229,
+      202,
+      .28
+    );
+}
+
+.inventoryNumbers span,
+.statusCards span {
+  color:
+    rgba(45, 63, 33, .50);
+
+  font-size: 9px;
+}
+
+.inventoryNumbers strong,
+.statusCards strong {
+  color:
+    var(--tkb-ink);
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+.statusCards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        120px,
+        1fr
+      )
+    );
+
+  gap: 9px;
+}
+
+.activity {
+  margin-top: 14px;
+}
+
+.activityList {
+  display: grid;
+}
+
+.activityList article {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-top:
+    1px solid
+    rgba(54, 39, 28, .07);
+}
+
+.activityList article:first-child {
+  border-top: 0;
+}
+
+.activityList article > div:first-child {
+  min-width: 0;
+
+  display: grid;
+
+  gap: 4px;
+}
+
+.activityList strong {
+  color:
+    var(--tkb-ink);
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.activityList article > div:first-child > span {
+  overflow: hidden;
+
+  color:
+    rgba(45, 63, 33, .53);
+
+  font-size: 10px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.activityMeta {
+  flex:
+    0 0 auto;
+
+  display: grid;
+
+  gap: 3px;
+
+  text-align: right;
+}
+
+.activityMeta span {
+  color:
+    rgba(45, 63, 33, .62);
+
+  font-size: 9px;
+}
+
+.activityMeta time {
+  color:
+    rgba(45, 63, 33, .42);
+
+  font-size: 8px;
+}
+
+.state {
+  margin-top: 22px;
+
+  padding: 26px;
+}
+
+.state strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color:
+    var(--tkb-ink);
+
+  font-size: 13px;
+}
+
+.state p {
+  margin: 0;
+
+  color:
+    rgba(45, 63, 33, .54);
+
+  font-size: 10px;
+}
+
+@media (
+  max-width: 900px
+) {
+  .charts {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+@media (
+  max-width: 560px
+) {
+  .metrics {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 8px;
+  }
+
+  .metric {
+    min-height: 112px;
+
+    padding: 14px;
+  }
+
+  .metric > strong {
+    font-size: 23px;
+  }
+
+  .panel,
+  .activity,
+  .revenueSection {
+    padding: 15px;
+  }
+
+  .sectionHeading {
+    flex-direction:
+      column;
+
+    gap: 7px;
+  }
+
+  .sectionHeading > span {
+    text-align: left;
+  }
+
+  .inventoryNumbers {
+    grid-template-columns:
+      1fr;
+  }
+
+  .activityList article {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap: 8px;
+  }
+
+  .activityList article >
+  div:first-child > span {
+    white-space:
+      normal;
+  }
+
+  .activityMeta {
+    text-align: left;
+  }
+}
+
+@media (
+  max-width: 380px
+) {
+  .metrics {
+    grid-template-columns:
+      1fr;
+  }
+}
+/* Dashboard compact content panels */
+
+.panel {
+  align-self:
+    start;
+}
+
+@media (max-width: 560px) {
+  .revenueSection {
+    width:
+      100%;
+
+    padding:
+      15px;
+  }
+
+  .revenueGrid {
+    grid-template-columns:
+      1fr;
+  }
+}
+/* DASHBOARD ORDERED LAYOUT V3 START */
+
+
+/* =========================================================
+   FINANCIAL — COMPACT HORIZONTAL SECTION
+   ========================================================= */
+
+.revenueSection {
+  width:
+    100% !important;
+
+  max-width:
+    none !important;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      180px,
+      .55fr
+    )
+    minmax(
+      240px,
+      1.45fr
+    );
+
+  align-items:
+    center;
+
+  gap:
+    24px;
+
+  margin-top:
+    14px;
+
+  padding:
+    18px 20px !important;
+}
+
+.revenueSection .sectionHeading {
+  margin:
+    0 !important;
+
+  padding-right:
+    20px;
+
+  border-right:
+    1px solid
+    rgba(
+      54,
+      39,
+      28,
+      .07
+    );
+}
+
+.revenueGrid {
+  width:
+    100%;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        150px,
+        190px
+      )
+    ) !important;
+
+  justify-content:
+    start;
+
+  gap:
+    10px;
+}
+
+.revenueCard {
+  min-width:
+    0 !important;
+
+  padding:
+    14px 15px;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD GRID
+   ========================================================= */
+
+.charts {
+  margin-top:
+    14px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1.65fr
+    )
+    minmax(
+      260px,
+      .75fr
+    ) !important;
+
+  align-items:
+    start !important;
+
+  gap:
+    12px !important;
+}
+
+.panel {
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  align-self:
+    start !important;
+
+  padding:
+    18px !important;
+}
+
+.panel .sectionHeading {
+  margin-bottom:
+    16px;
+}
+
+
+/* =========================================================
+   PRODUCT STATUS — TIGHTER
+   ========================================================= */
+
+.statusCards {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    ) !important;
+
+  gap:
+    8px !important;
+}
+
+.statusCards > div {
+  min-height:
+    68px;
+
+  align-content:
+    center;
+
+  padding:
+    11px !important;
+}
+
+
+/* =========================================================
+   INVENTORY — KEEP NUMBERS ORGANIZED
+   ========================================================= */
+
+.inventoryNumbers {
+  margin-top:
+    18px;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    ) !important;
+
+  gap:
+    8px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+  max-width: 1000px
+) {
+  .charts {
+    grid-template-columns:
+      minmax(
+        0,
+        1.35fr
+      )
+      minmax(
+        230px,
+        .8fr
+      ) !important;
+  }
+
+  .revenueSection {
+    grid-template-columns:
+      180px
+      minmax(
+        0,
+        1fr
+      );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 760px
+) {
+  .charts {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      ) !important;
+
+    gap:
+      10px !important;
+  }
+
+  .revenueSection {
+    display:
+      block;
+
+    width:
+      100% !important;
+
+    padding:
+      15px !important;
+  }
+
+  .revenueSection .sectionHeading {
+    margin-bottom:
+      14px !important;
+
+    padding-right:
+      0;
+
+    padding-bottom:
+      12px;
+
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        54,
+        39,
+        28,
+        .07
+      );
+  }
+
+  .revenueGrid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      ) !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (
+  max-width: 480px
+) {
+  .revenueGrid,
+  .statusCards,
+  .inventoryNumbers {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      ) !important;
+  }
+
+  .panel {
+    padding:
+      15px !important;
+  }
+}
+
+/* DASHBOARD ORDERED LAYOUT V3 END */
+
+/* TKB DASHBOARD RTL V1 START */
+
+/* Dashboard direction is isolated from other admin pages. */
+
+.sectionHeading > span {
+  text-align: left;
+}
+
+.activityMeta {
+  text-align: left;
+}
+
+/* Mirror the divider within the financial section. */
+.revenueSection .sectionHeading {
+  padding-right: 0;
+  padding-left: 20px;
+  border-right: 0;
+  border-left: 1px solid rgba(54, 39, 28, .07);
+}
+
+@media (max-width: 760px) {
+  .revenueSection .sectionHeading {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .sectionHeading > span,
+  .activityMeta {
+    text-align: right;
+  }
+}
+
+/* TKB DASHBOARD RTL V1 END */
+
+/* TKB DASHBOARD METRIC CENTER V1 START */
+
+/* Center only the top dashboard metric cards. */
+
+.metrics .metric {
+  align-items: center;
+  text-align: center;
+}
+
+.metrics .metric > span,
+.metrics .metric > strong,
+.metrics .metric > small {
+  width: 100%;
+  text-align: center;
+}
+
+/* TKB DASHBOARD METRIC CENTER V1 END */
+
+/* TKB DASHBOARD COMPACT CARDS V1 START */
+
+/* A single product status fills the available row. */
+.statusCards > div:only-child {
+  grid-column: 1 / -1;
+}
+
+/* Compact horizontal content in product and inventory cards. */
+.statusCards > div,
+.inventoryNumbers > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  min-height: 48px !important;
+  padding: 9px 12px !important;
+}
+
+/* Labels stay on the RTL starting side. */
+.statusCards > div > span,
+.inventoryNumbers > div > span {
+  min-width: 0;
+  flex: 1 1 auto;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* Values stay opposite their labels. */
+.statusCards > div > strong,
+.inventoryNumbers > div > strong {
+  flex: 0 0 auto;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+/* TKB DASHBOARD COMPACT CARDS V1 END */

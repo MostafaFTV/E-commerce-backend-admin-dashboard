@@ -1,0 +1,786 @@
+{
+  "version": "1.0",
+  "scope": "offline deterministic contracts only; model fluency requires independent live evaluation",
+  "cases": [
+    {
+      "id": "OPTION-001",
+      "category": "option",
+      "input": "اولی",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-002",
+      "category": "option",
+      "input": "گزینه اول",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-003",
+      "category": "option",
+      "input": "گزینه‌اول",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-004",
+      "category": "option",
+      "input": "شماره یک",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-005",
+      "category": "option",
+      "input": "first",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-006",
+      "category": "option",
+      "input": "1st",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-007",
+      "category": "option",
+      "input": "option 1",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-008",
+      "category": "option",
+      "input": "number 1",
+      "expected": 0
+    },
+    {
+      "id": "OPTION-009",
+      "category": "option",
+      "input": "دومی",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-010",
+      "category": "option",
+      "input": "گزینه دوم",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-011",
+      "category": "option",
+      "input": "گزینه‌دوم",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-012",
+      "category": "option",
+      "input": "شماره دو",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-013",
+      "category": "option",
+      "input": "second",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-014",
+      "category": "option",
+      "input": "2nd",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-015",
+      "category": "option",
+      "input": "option 2",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-016",
+      "category": "option",
+      "input": "number 2",
+      "expected": 1
+    },
+    {
+      "id": "OPTION-017",
+      "category": "option",
+      "input": "سومی",
+      "expected": 2
+    },
+    {
+      "id": "OPTION-018",
+      "category": "option",
+      "input": "گزینه سوم",
+      "expected": 2
+    },
+    {
+      "id": "OPTION-019",
+      "category": "option",
+      "input": "گزینه‌سوم",
+      "expected": 2
+    },
+    {
+      "id": "OPTION-020",
+      "category": "option",
+      "input": "شماره سه",
+      "expected": 2
+    },
+    {
+      "id": "PAGE-001",
+      "category": "page",
+      "input": "لینک تماس با ما",
+      "expected": "/contact"
+    },
+    {
+      "id": "PAGE-002",
+      "category": "page",
+      "input": "آدرس تماس با ما",
+      "expected": "/contact"
+    },
+    {
+      "id": "PAGE-003",
+      "category": "page",
+      "input": "صفحه تماس با ما",
+      "expected": "/contact"
+    },
+    {
+      "id": "PAGE-004",
+      "category": "page",
+      "input": "contact us page",
+      "expected": "/contact"
+    },
+    {
+      "id": "PAGE-005",
+      "category": "page",
+      "input": "صفحه درباره ما",
+      "expected": "/about"
+    },
+    {
+      "id": "PAGE-006",
+      "category": "page",
+      "input": "لینک درباره ما",
+      "expected": "/about"
+    },
+    {
+      "id": "PAGE-007",
+      "category": "page",
+      "input": "about us page",
+      "expected": "/about"
+    },
+    {
+      "id": "PAGE-008",
+      "category": "page",
+      "input": "open about us",
+      "expected": "/about"
+    },
+    {
+      "id": "PAGE-009",
+      "category": "page",
+      "input": "صفحه سوالات متداول",
+      "expected": "/faq"
+    },
+    {
+      "id": "PAGE-010",
+      "category": "page",
+      "input": "لینک پرسش‌های متداول",
+      "expected": "/faq"
+    },
+    {
+      "id": "PAGE-011",
+      "category": "page",
+      "input": "open FAQ",
+      "expected": "/faq"
+    },
+    {
+      "id": "PAGE-012",
+      "category": "page",
+      "input": "FAQ page",
+      "expected": "/faq"
+    },
+    {
+      "id": "PAGE-013",
+      "category": "page",
+      "input": "صفحه محصولات",
+      "expected": "/products"
+    },
+    {
+      "id": "PAGE-014",
+      "category": "page",
+      "input": "لینک همه محصولات",
+      "expected": "/products"
+    },
+    {
+      "id": "PAGE-015",
+      "category": "page",
+      "input": "open products page",
+      "expected": "/products"
+    },
+    {
+      "id": "PAGE-016",
+      "category": "page",
+      "input": "all products page",
+      "expected": "/products"
+    },
+    {
+      "id": "PAGE-017",
+      "category": "page",
+      "input": "صفحه کالکشن‌ها",
+      "expected": "/collections"
+    },
+    {
+      "id": "PAGE-018",
+      "category": "page",
+      "input": "لینک کالکشن‌ها",
+      "expected": "/collections"
+    },
+    {
+      "id": "PAGE-019",
+      "category": "page",
+      "input": "open collections",
+      "expected": "/collections"
+    },
+    {
+      "id": "PAGE-020",
+      "category": "page",
+      "input": "collections page",
+      "expected": "/collections"
+    },
+    {
+      "id": "COMPARE-001",
+      "category": "compare",
+      "input": "مقایسه این دو",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-002",
+      "category": "compare",
+      "input": "تفاوت این مدل‌ها",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-003",
+      "category": "compare",
+      "input": "کدوم بهتره؟",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-004",
+      "category": "compare",
+      "input": "کدام بهتر است؟",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-005",
+      "category": "compare",
+      "input": "بین این دو",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-006",
+      "category": "compare",
+      "input": "هر دو رو بررسی کن",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-007",
+      "category": "compare",
+      "input": "compare them",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-008",
+      "category": "compare",
+      "input": "comparison please",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-009",
+      "category": "compare",
+      "input": "difference between them",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-010",
+      "category": "compare",
+      "input": "which one is better",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-011",
+      "category": "compare",
+      "input": "which would you choose",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-012",
+      "category": "compare",
+      "input": "versus this one",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-013",
+      "category": "compare",
+      "input": "vs the other",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-014",
+      "category": "compare",
+      "input": "both options",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-015",
+      "category": "compare",
+      "input": "between them",
+      "expected": true
+    },
+    {
+      "id": "COMPARE-016",
+      "category": "compare",
+      "input": "سلام",
+      "expected": false
+    },
+    {
+      "id": "COMPARE-017",
+      "category": "compare",
+      "input": "hello",
+      "expected": false
+    },
+    {
+      "id": "COMPARE-018",
+      "category": "compare",
+      "input": "قهوه",
+      "expected": false
+    },
+    {
+      "id": "COMPARE-019",
+      "category": "compare",
+      "input": "چای",
+      "expected": false
+    },
+    {
+      "id": "COMPARE-020",
+      "category": "compare",
+      "input": "لینک تماس با ما",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-001",
+      "category": "handoff",
+      "input": "میخوام با مشاور فروش صحبت کنم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-002",
+      "category": "handoff",
+      "input": "می‌خوام با فروشنده صحبت کنم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-003",
+      "category": "handoff",
+      "input": "میشه با کارشناس حرف بزنم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-004",
+      "category": "handoff",
+      "input": "لطفاً با اپراتور ارتباط بگیرم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-005",
+      "category": "handoff",
+      "input": "میخواهم با آدم واقعی صحبت کنم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-006",
+      "category": "handoff",
+      "input": "می تونم با مشاور فروش صحبت کنم",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-007",
+      "category": "handoff",
+      "input": "talk to a human",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-008",
+      "category": "handoff",
+      "input": "speak to a real person",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-009",
+      "category": "handoff",
+      "input": "chat with a sales advisor",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-010",
+      "category": "handoff",
+      "input": "connect with a representative",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-011",
+      "category": "handoff",
+      "input": "human agent",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-012",
+      "category": "handoff",
+      "input": "live agent",
+      "expected": true
+    },
+    {
+      "id": "HANDOFF-013",
+      "category": "handoff",
+      "input": "Recommend a knife for a chef",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-014",
+      "category": "handoff",
+      "input": "Tell me about this product",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-015",
+      "category": "handoff",
+      "input": "با این چاقو چی درست کنم؟",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-016",
+      "category": "handoff",
+      "input": "درباره محصولات بگو",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-017",
+      "category": "handoff",
+      "input": "human centered design",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-018",
+      "category": "handoff",
+      "input": "فروشنده چه چاقویی پیشنهاد می‌کند؟",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-019",
+      "category": "handoff",
+      "input": "I need a knife",
+      "expected": false
+    },
+    {
+      "id": "HANDOFF-020",
+      "category": "handoff",
+      "input": "یک کتری می‌خوام",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-001",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"سلام، خوش آمدید.\", \"recommended_product_ids\": []}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-002",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"این گزینه مناسب است.\", \"recommended_product_ids\": [11]}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-003",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"این دو گزینه را ببینید.\", \"recommended_product_ids\": [11, 22]}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-004",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"سه گزینه مناسب هستند.\", \"recommended_product_ids\": [11, 22, 33]}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-005",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"متوجه شدم.\", \"recommended_product_ids\": [], \"next_question\": \"چای یا قهوه؟\"}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-006",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"These may suit your needs.\", \"recommended_product_ids\": [7, 8]}",
+      "expected": true
+    },
+    {
+      "id": "RESPONSE-007",
+      "category": "response",
+      "input": "",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-008",
+      "category": "response",
+      "input": "not json",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-009",
+      "category": "response",
+      "input": "{",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-010",
+      "category": "response",
+      "input": "[]",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-011",
+      "category": "response",
+      "input": "{}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-012",
+      "category": "response",
+      "input": "{\"response_version\": 1, \"message\": \"hello\", \"recommended_product_ids\": []}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-013",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"\", \"recommended_product_ids\": []}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-014",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": [1, 2, 3, 4]}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-015",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": [1, 1]}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-016",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": [0]}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-017",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": [-2]}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-018",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": [\"42\"]}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-019",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": \"hello\", \"recommended_product_ids\": {\"x\": 1}}",
+      "expected": false
+    },
+    {
+      "id": "RESPONSE-020",
+      "category": "response",
+      "input": "{\"response_version\": 2, \"message\": 4, \"recommended_product_ids\": []}",
+      "expected": false
+    },
+    {
+      "id": "MEMORY-001",
+      "category": "memory",
+      "input": "آشپزخانه کوچیک دارم",
+      "expected": {
+        "key": "kitchen_space",
+        "value": "small"
+      }
+    },
+    {
+      "id": "MEMORY-002",
+      "category": "memory",
+      "input": "آشپزخانه کوچک دارم",
+      "expected": {
+        "key": "kitchen_space",
+        "value": "small"
+      }
+    },
+    {
+      "id": "MEMORY-003",
+      "category": "memory",
+      "input": "small kitchen",
+      "expected": {
+        "key": "kitchen_space",
+        "value": "small"
+      }
+    },
+    {
+      "id": "MEMORY-004",
+      "category": "memory",
+      "input": "tiny kitchen",
+      "expected": {
+        "key": "kitchen_space",
+        "value": "small"
+      }
+    },
+    {
+      "id": "MEMORY-005",
+      "category": "memory",
+      "input": "وسیله جمع‌وجور",
+      "expected": {
+        "key": "product_size",
+        "value": "compact"
+      }
+    },
+    {
+      "id": "MEMORY-006",
+      "category": "memory",
+      "input": "یه وسیله کم جا",
+      "expected": {
+        "key": "product_size",
+        "value": "compact"
+      }
+    },
+    {
+      "id": "MEMORY-007",
+      "category": "memory",
+      "input": "compact",
+      "expected": {
+        "key": "product_size",
+        "value": "compact"
+      }
+    },
+    {
+      "id": "MEMORY-008",
+      "category": "memory",
+      "input": "space-saving device",
+      "expected": {
+        "key": "product_size",
+        "value": "compact"
+      }
+    },
+    {
+      "id": "MEMORY-009",
+      "category": "memory",
+      "input": "نوشیدنی",
+      "expected": {
+        "key": "usage",
+        "value": "drinks"
+      }
+    },
+    {
+      "id": "MEMORY-010",
+      "category": "memory",
+      "input": "beverage",
+      "expected": {
+        "key": "usage",
+        "value": "drinks"
+      }
+    },
+    {
+      "id": "MEMORY-011",
+      "category": "memory",
+      "input": "drinks",
+      "expected": {
+        "key": "usage",
+        "value": "drinks"
+      }
+    },
+    {
+      "id": "MEMORY-012",
+      "category": "memory",
+      "input": "قهوه",
+      "expected": {
+        "key": "drink_type",
+        "value": "coffee"
+      }
+    },
+    {
+      "id": "MEMORY-013",
+      "category": "memory",
+      "input": "coffee",
+      "expected": {
+        "key": "drink_type",
+        "value": "coffee"
+      }
+    },
+    {
+      "id": "MEMORY-014",
+      "category": "memory",
+      "input": "چای",
+      "expected": {
+        "key": "drink_type",
+        "value": "tea"
+      }
+    },
+    {
+      "id": "MEMORY-015",
+      "category": "memory",
+      "input": "دمنوش",
+      "expected": {
+        "key": "drink_type",
+        "value": "tea"
+      }
+    },
+    {
+      "id": "MEMORY-016",
+      "category": "memory",
+      "input": "tea",
+      "expected": {
+        "key": "drink_type",
+        "value": "tea"
+      }
+    },
+    {
+      "id": "MEMORY-017",
+      "category": "memory",
+      "input": "herbal infusion",
+      "expected": {
+        "key": "drink_type",
+        "value": "tea"
+      }
+    },
+    {
+      "id": "MEMORY-018",
+      "category": "memory",
+      "input": "قهوه برای نوشیدنی",
+      "expected": {
+        "key": "usage",
+        "value": "drinks"
+      }
+    },
+    {
+      "id": "MEMORY-019",
+      "category": "memory",
+      "input": "جمع وجور برای آشپزخانه",
+      "expected": {
+        "key": "product_size",
+        "value": "compact"
+      }
+    },
+    {
+      "id": "MEMORY-020",
+      "category": "memory",
+      "input": "کوچکترین آشپزخانه کوچیک",
+      "expected": {
+        "key": "kitchen_space",
+        "value": "small"
+      }
+    }
+  ]
+}

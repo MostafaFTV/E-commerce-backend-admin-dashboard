@@ -1,0 +1,73 @@
+.ticketTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ticketTop > div {
+  display: grid;
+  gap: 7px;
+}
+
+.messageList {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.message {
+  padding: 16px;
+  border: 1px solid rgba(45, 63, 33, 0.12);
+  background: #f8f8f5;
+}
+
+.adminMessage {
+  background: #edf2eb;
+}
+
+.message > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: #64705e;
+  font-size: 12px;
+}
+
+.message > div strong {
+  color: #2d3f21;
+}
+
+.message p {
+  margin: 12px 0 0;
+  color: #3d4937;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.replyField {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #5d6755;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.replyField textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid rgba(45, 63, 33, 0.14);
+  background: #fff;
+  color: #2d3f21;
+  font: inherit;
+}
+
+@media (max-width: 700px) {
+  .ticketTop {
+    flex-direction: column;
+  }
+}

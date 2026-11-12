@@ -1,0 +1,448 @@
+.page {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.toolbar,
+.filters,
+.formGrid,
+.list {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.toolbar {
+  grid-template-columns: minmax(220px, 1fr) auto;
+  align-items: end;
+}
+
+.filters {
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  align-items: end;
+}
+
+.formGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px 16px;
+}
+
+.field {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  color: #394331;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.field input,
+.field textarea,
+.toolbar input {
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  border: 1px solid rgba(45, 63, 33, .18);
+  border-radius: 9px;
+  padding: 8px 11px;
+  color: #293421;
+  background: #fff;
+  font: inherit;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible,
+.toolbar input:focus-visible {
+  outline: 2px solid rgba(109, 112, 91, .35);
+  outline-offset: 1px;
+}
+
+.field textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.descriptionField {
+  grid-column: span 2;
+}
+
+.customerField {
+  grid-column: span 2;
+}
+
+.card,
+.codeCard,
+.formCard {
+  border: 1px solid rgba(45, 63, 33, .15);
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+}
+
+.formCard {
+  display: grid;
+  gap: 14px;
+}
+
+.formHead,
+.codeHead,
+.codeMeta,
+.actions,
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.formHead h2,
+.codeHead h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.codeCard {
+  display: grid;
+  gap: 12px;
+}
+
+.codeHead strong {
+  direction: ltr;
+  color: #293421;
+  font-size: 16px;
+}
+
+.codeMeta {
+  justify-content: flex-start;
+  color: #69705f;
+  font-size: 12px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #3d6843;
+  background: #e8f2e7;
+  font-size: 11px;
+}
+
+.status[data-status="expired"] {
+  color: #85613d;
+  background: #f5eddf;
+}
+
+.status[data-status="inactive"] {
+  color: #8d4545;
+  background: #f8e7e7;
+}
+
+.error,
+.success,
+.state {
+  border-radius: 8px;
+  padding: 11px 13px;
+  font-size: 13px;
+}
+
+.error {
+  color: #923d3d;
+  background: #fbe8e8;
+}
+
+.success {
+  color: #355c3e;
+  background: #e9f3e8;
+}
+
+.state {
+  color: #69705f;
+  background: #f4f3ef;
+}
+
+.pagination {
+  justify-content: center;
+  padding: 10px;
+}
+
+.pagination button,
+.actions button,
+.toolbar button {
+  min-height: 36px;
+  border: 1px solid rgba(45, 63, 33, .2);
+  border-radius: 9px;
+  padding: 7px 12px;
+  color: #293421;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.actions {
+  justify-content: flex-start;
+}
+
+.actions .primary {
+  border-color: #2d3f21;
+  color: #fff;
+  background: #2d3f21;
+}
+
+.actions button:disabled,
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.customerSearch {
+  position: relative;
+  min-width: 0;
+}
+
+.customerSearch input {
+  padding-inline-end: 68px;
+}
+
+.clearCustomer {
+  position: absolute;
+  inset-inline-end: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  padding: 4px 6px;
+  color: #6d705b;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.customerOptions {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 5px);
+  inset-inline: 0;
+  display: grid;
+  max-height: 220px;
+  overflow: auto;
+  padding: 5px;
+  border: 1px solid rgba(45, 63, 33, .15);
+  border-radius: 10px;
+  background: #fffefa;
+  box-shadow: 0 12px 28px rgba(45, 63, 33, .14);
+}
+
+.customerOption,
+.customerOptionActive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  min-height: 36px;
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 9px;
+  color: #293421;
+  background: transparent;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.customerOption:hover,
+.customerOptionActive {
+  background: #f1ede6;
+}
+
+.customerOption span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.customerHint {
+  margin: 0;
+  padding: 9px;
+  color: #69705f;
+  font-size: 11px;
+}
+
+.datePicker {
+  min-width: 0;
+}
+
+.datePicker :global(.cashback-jalali) {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  width: 100%;
+}
+
+.datePicker :global(.cashback-jalali:has(.cashback-jalali-popup)) {
+  z-index: 100;
+}
+
+.datePicker :global(.cashback-jalali-trigger) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid rgba(45, 63, 33, .18);
+  border-radius: 9px;
+  padding: 0 10px;
+  color: #293421;
+  background: #f7f4ed;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.datePicker :global(.cashback-jalali-popup) {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 110;
+  width: min(266px, calc(100vw - 32px));
+  max-height: min(440px, calc(100dvh - 24px));
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid rgba(45, 63, 33, .13);
+  border-radius: 12px;
+  background: #fffefa;
+  box-shadow: 0 16px 36px rgba(45, 63, 33, .16);
+}
+
+.datePicker :global(.cashback-jalali-heading) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.datePicker :global(.cashback-jalali-heading strong) {
+  color: #2d3f21;
+  font-size: 11px;
+}
+
+.datePicker :global(.cashback-jalali-heading button) {
+  min-width: 26px;
+  min-height: 26px;
+  border: 0;
+  border-radius: 7px;
+  color: #2d3f21;
+  background: transparent;
+  font: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.datePicker :global(.cashback-jalali-grid) {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  text-align: center;
+}
+
+.datePicker :global(.cashback-jalali-grid b),
+.datePicker :global(.cashback-jalali-grid button) {
+  display: grid;
+  place-items: center;
+  height: 27px;
+  min-height: 27px;
+  border: 0;
+  border-radius: 6px;
+  color: #2d3f21;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+}
+
+.datePicker :global(.cashback-jalali-grid button) {
+  cursor: pointer;
+}
+
+.datePicker :global(.cashback-jalali-grid button.outside) {
+  opacity: .35;
+}
+
+.datePicker :global(.cashback-jalali-grid button.selected),
+.datePicker :global(.cashback-jalali-grid button:hover) {
+  color: #fff;
+  background: #6d705b;
+}
+
+.datePicker :global(.cashback-jalali-time) {
+  display: flex;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.datePicker :global(.cashback-jalali-time label) {
+  display: grid;
+  flex: 1;
+  gap: 3px;
+  color: #394331;
+  font-size: 10px;
+}
+
+.datePicker :global(.cashback-jalali-time input) {
+  width: 100%;
+  min-height: 31px;
+  border: 1px solid #d8d3c6;
+  border-radius: 8px;
+  padding: 3px 7px;
+  font: inherit;
+}
+
+.datePicker :global(.cashback-jalali-actions) {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.datePicker :global(.cashback-jalali-actions button) {
+  min-height: 29px;
+  border: 0;
+  border-radius: 8px;
+  padding: 5px 9px;
+  color: #2d3f21;
+  background: #efe5ca;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .formGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .toolbar,
+  .filters,
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .descriptionField,
+  .customerField {
+    grid-column: auto;
+  }
+
+  .card,
+  .codeCard,
+  .formCard {
+    padding: 14px;
+  }
+
+  .datePicker :global(.cashback-jalali-popup) {
+    width: min(266px, calc(100vw - 40px));
+  }
+}

@@ -1,0 +1,501 @@
+.root {
+  width: 100%;
+  min-width: 0;
+
+  position: relative;
+}
+
+.trigger {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding:
+    0 12px !important;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .09) !important;
+
+  border-radius:
+    13px !important;
+
+  outline: none;
+
+  background:
+    var(--tkb-wafer) !important;
+
+  color:
+    var(--tkb-ink) !important;
+
+  box-shadow:
+    var(--admin-shadow-inset);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-align: left;
+
+  transition:
+    border-color .16s ease,
+    background .16s ease,
+    box-shadow .16s ease;
+}
+
+.trigger:hover:not(:disabled) {
+  border-color:
+    rgba(109, 112, 91, .34) !important;
+
+  background:
+    #f7f4ed !important;
+}
+
+.trigger:focus-visible,
+.triggerOpen {
+  border-color:
+    rgba(109, 112, 91, .65) !important;
+
+  background:
+    #ffffff !important;
+
+  box-shadow:
+    inset 2px 2px 6px
+      rgba(54, 39, 28, .04),
+    0 0 0 3px
+      rgba(109, 112, 91, .08);
+}
+
+.value {
+  color:
+    var(--tkb-ink);
+}
+
+.placeholder {
+  color:
+    rgba(45, 63, 33, .42);
+}
+
+.calendarIcon {
+  position: relative;
+
+  width: 15px;
+  height: 14px;
+
+  flex:
+    0 0 auto;
+
+  border:
+    1.4px solid
+    rgba(45, 63, 33, .58);
+
+  border-radius:
+    3px;
+}
+
+.calendarIcon::before {
+  content: "";
+
+  position: absolute;
+
+  left: -1.4px;
+  right: -1.4px;
+  top: 3px;
+
+  border-top:
+    1.4px solid
+    rgba(45, 63, 33, .58);
+}
+
+.calendarIcon::after {
+  content: "";
+
+  position: absolute;
+
+  top: -3px;
+  left: 3px;
+
+  width: 6px;
+  height: 4px;
+
+  border-left:
+    1.4px solid
+    rgba(45, 63, 33, .58);
+
+  border-right:
+    1.4px solid
+    rgba(45, 63, 33, .58);
+}
+
+.calendarIcon span {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  left: 3px;
+  top: 7px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(45, 63, 33, .58);
+
+  box-shadow:
+    4px 0
+      rgba(45, 63, 33, .58),
+    8px 0
+      rgba(45, 63, 33, .58);
+}
+
+.popup {
+  position: fixed;
+
+  z-index: 11000;
+
+  padding: 14px;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .10);
+
+  border-radius:
+    16px;
+
+  background:
+    rgba(247, 244, 237, .99);
+
+  box-shadow:
+    0 20px 48px
+      rgba(54, 39, 28, .17);
+
+  backdrop-filter:
+    blur(16px);
+}
+
+.header {
+  min-height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+
+  padding:
+    0 2px 10px;
+
+  border-bottom:
+    1px solid
+    rgba(54, 39, 28, .08);
+}
+
+.header > div:first-child {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 7px;
+}
+
+.header strong {
+  color:
+    var(--tkb-ink);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header span {
+  color:
+    rgba(45, 63, 33, .52);
+
+  font-size: 10px;
+}
+
+.navigation {
+  display: flex;
+
+  gap: 5px;
+}
+
+.navigation button {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding:
+    0 !important;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .08) !important;
+
+  border-radius:
+    9px !important;
+
+  background:
+    transparent !important;
+
+  color:
+    rgba(45, 63, 33, .72) !important;
+
+  cursor:
+    pointer;
+
+  font-size:
+    20px;
+
+  line-height:
+    1;
+
+  box-shadow:
+    none !important;
+}
+
+.navigation button:hover {
+  background:
+    rgba(109, 112, 91, .10) !important;
+
+  color:
+    var(--tkb-ink) !important;
+}
+
+.weekdays,
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      7,
+      minmax(0, 1fr)
+    );
+}
+
+.weekdays {
+  margin-bottom: 4px;
+}
+
+.weekdays span {
+  display: grid;
+
+  place-items: center;
+
+  height: 28px;
+
+  color:
+    rgba(45, 63, 33, .46);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  text-transform:
+    uppercase;
+}
+
+.day {
+  aspect-ratio: 1;
+
+  min-width: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  padding:
+    0 !important;
+
+  border:
+    0 !important;
+
+  border-radius:
+    9px !important;
+
+  background:
+    transparent !important;
+
+  color:
+    rgba(45, 63, 33, .78) !important;
+
+  cursor:
+    pointer;
+
+  font-family:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+
+  box-shadow:
+    none !important;
+
+  transition:
+    background .14s ease,
+    color .14s ease,
+    transform .14s ease;
+}
+
+.day:hover:not(:disabled) {
+  background:
+    rgba(109, 112, 91, .11) !important;
+
+  color:
+    var(--tkb-ink) !important;
+}
+
+.outside {
+  color:
+    rgba(45, 63, 33, .28) !important;
+}
+
+.today {
+  box-shadow:
+    inset 0 0 0 1px
+      rgba(181, 132, 88, .45) !important;
+
+  color:
+    var(--tkb-copper) !important;
+}
+
+.selected,
+.selected:hover {
+  background:
+    #6d705b !important;
+
+  color:
+    #ffffff !important;
+
+  box-shadow:
+    0 5px 12px
+      rgba(45, 63, 33, .18) !important;
+}
+
+.day:disabled {
+  opacity: .28;
+
+  cursor:
+    not-allowed;
+}
+
+.footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  padding-top: 11px;
+
+  border-top:
+    1px solid
+    rgba(54, 39, 28, .08);
+}
+
+.textButton,
+.todayButton {
+  min-height:
+    32px !important;
+
+  padding:
+    0 10px !important;
+
+  border-radius:
+    9px !important;
+
+  font-family:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    none !important;
+}
+
+.textButton {
+  border:
+    0 !important;
+
+  background:
+    transparent !important;
+
+  color:
+    rgba(45, 63, 33, .58) !important;
+}
+
+.textButton:hover:not(:disabled) {
+  color:
+    var(--tkb-ink) !important;
+
+  background:
+    rgba(109, 112, 91, .08) !important;
+}
+
+.todayButton {
+  border:
+    1px solid
+    rgba(109, 112, 91, .18) !important;
+
+  background:
+    rgba(109, 112, 91, .10) !important;
+
+  color:
+    #596048 !important;
+}
+
+.todayButton:hover {
+  background:
+    rgba(109, 112, 91, .16) !important;
+}
+
+@media (
+  max-width: 760px
+) {
+  .trigger {
+    min-height:
+      44px;
+  }
+
+  .popup {
+    padding:
+      12px;
+
+    border-radius:
+      14px;
+  }
+
+  .day {
+    font-size:
+      11px;
+  }
+}

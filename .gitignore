@@ -1,0 +1,60 @@
+# TKB Backend + Admin - Public Monorepo
+
+# Environment and secrets
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.p12
+**/*.pfx
+**/id_rsa
+**/id_ed25519
+**/*.key
+
+# Dependencies
+**/vendor/
+**/node_modules/
+
+# Build and generated outputs
+**/.next/
+**/dist/
+**/build/
+**/coverage/
+**/.turbo/
+**/*.tsbuildinfo
+**/next-env.d.ts
+
+# Laravel runtime
+backend/storage/logs/
+backend/storage/framework/cache/
+backend/storage/framework/sessions/
+backend/storage/framework/views/
+backend/bootstrap/cache/*.php
+backend/public/storage
+
+# Local databases and backups
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+**/*.sql
+**/*.bak
+**/*.backup
+**/*.zip
+
+# OS and editor
+**/.DS_Store
+**/Thumbs.db
+**/.idea/
+**/.vscode/
+
+# Local audit artifacts
+**/public-security-audit/
+
+# Public release safety additions
+**/*.woff
+**/*.woff2
+**/*.ttf
+**/*.otf
+
+# PHPUnit cache
+**/.phpunit.result.cache

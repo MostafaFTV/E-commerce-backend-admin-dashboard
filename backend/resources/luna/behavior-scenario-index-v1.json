@@ -1,0 +1,23 @@
+{
+    "version":  1,
+    "cases":  [
+                  {
+                      "rule":  "Compare verified product characteristics against the customer\u0027s needs.",
+                      "category":  "product_comparisons",
+                      "examples":  [
+                                       "بین این دو تابه کدوم برای من بهتره؟ تنها زندگی می‌کنم.",
+                                       "Compare these two pans for my kitchen."
+                                   ],
+                      "id":  "COMPARE-001"
+                  },
+                  {
+                      "rule":  "Acknowledge the customer\u0027s concern and recommend an appropriate support path.",
+                      "category":  "complaints_and_difficult_customers",
+                      "examples":  [
+                                       "محصولی که گرفتم شکسته به دستم رسید؛ واقعاً ناراحتم",
+                                       "My order arrived damaged."
+                                   ],
+                      "id":  "COMPLAINT-001"
+                  }
+              ]
+}

@@ -1,0 +1,4672 @@
+.form {
+  width: 100%;
+  display: grid;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.formMessage {
+  border: 1px solid rgba(139, 57, 45, .32);
+  padding: 14px 16px;
+  color: var(--admin-danger);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.section {
+  width: 100%;
+  border: 1px solid var(--admin-border);
+  background: #ffffff;
+  padding: 28px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+.sectionHead > p {
+  width: min(100%, 360px);
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.sectionEyebrow {
+  margin: 0 0 7px;
+  color: var(--admin-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 24px 28px;
+}
+
+.field {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.field label {
+  color: var(--admin-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.field textarea,
+.inlineField input,
+.attributeCreate input,
+.attributeCreate select {
+  width: 100%;
+  border: 1px solid var(--admin-border-strong);
+  border-radius: 0;
+  outline: none;
+  background: #ffffff;
+  color: var(--admin-text);
+  font-size: 12px;
+}
+
+.field input,
+.field select,
+.inlineField input,
+.attributeCreate input,
+.attributeCreate select {
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+  padding: 12px;
+  line-height: 1.7;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.inlineField input:focus,
+.attributeCreate input:focus,
+.attributeCreate select:focus {
+  border-color: var(--admin-text);
+}
+
+.error {
+  margin: 0;
+  color: var(--admin-danger);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.emptyNote {
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.permissionNote {
+  margin: 0 0 18px;
+  border: 1px solid var(--admin-border);
+  padding: 12px 14px;
+  color: var(--admin-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.checkboxField {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+  border: 1px solid var(--admin-border);
+  padding: 0 13px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.checkboxField input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--admin-text);
+}
+
+.inlineField {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+  gap: 8px;
+  align-self: end;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  border-top: 1px solid var(--admin-border);
+  border-left: 1px solid var(--admin-border);
+}
+
+.optionCard {
+  min-width: 0;
+  min-height: 68px;
+  display: grid;
+  grid-template-columns:
+    auto minmax(0, 1fr);
+  align-content: center;
+  column-gap: 10px;
+  border-right: 1px solid var(--admin-border);
+  border-bottom: 1px solid var(--admin-border);
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.optionCardActive {
+  background: var(--admin-sidebar);
+}
+
+.optionCard input {
+  grid-row: 1 / 3;
+  align-self: center;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--admin-text);
+}
+
+.optionCard span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--admin-text);
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionCard small {
+  margin-top: 4px;
+  color: var(--admin-muted);
+  font-size: 9px;
+}
+
+.attributeCreate {
+  display: grid;
+  grid-template-columns:
+    1fr 1fr 180px auto;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.attributeList {
+  display: grid;
+  gap: 18px;
+}
+
+.attributeBlock {
+  border: 1px solid var(--admin-border);
+  padding: 18px;
+}
+
+.attributeHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.attributeHeader > div {
+  display: grid;
+  gap: 4px;
+}
+
+.attributeHeader strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.attributeHeader small,
+.attributeHeader > span {
+  color: var(--admin-muted);
+  font-size: 9px;
+}
+
+.valueGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.valueOption {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--admin-border);
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.valueOptionActive {
+  border-color: var(--admin-text);
+  background: var(--admin-sidebar);
+}
+
+.valueOption input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: var(--admin-text);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.toolbar > span {
+  margin-left: auto;
+  color: var(--admin-muted);
+  font-size: 10px;
+}
+
+.variantList {
+  display: grid;
+  gap: 16px;
+}
+
+.variantCard {
+  border: 1px solid var(--admin-border);
+  padding: 18px;
+}
+
+.variantTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.variantTop > div {
+  display: grid;
+  gap: 5px;
+}
+
+.variantTop strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.variantTop span {
+  color: var(--admin-muted);
+  font-size: 10px;
+}
+
+.variantGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 18px;
+}
+
+.uploadBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  border: 1px dashed var(--admin-border-strong);
+  padding: 18px;
+}
+
+.uploadBox input {
+  max-width: 340px;
+}
+
+.uploadBox span {
+  color: var(--admin-muted);
+  font-size: 10px;
+}
+
+.mediaList {
+  display: grid;
+  gap: 16px;
+}
+
+.mediaCard {
+  display: grid;
+  grid-template-columns:
+    140px minmax(0, 1fr);
+  gap: 18px;
+  border: 1px solid var(--admin-border);
+  padding: 16px;
+}
+
+.mediaPreview {
+  width: 140px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--admin-border);
+  background: var(--admin-sidebar);
+}
+
+.mediaPreview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.mediaContent {
+  min-width: 0;
+}
+
+.mediaTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.mediaTitle strong {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mediaTitle small {
+  flex: 0 0 auto;
+  color: var(--admin-muted);
+  font-size: 9px;
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 14px;
+}
+
+.mediaActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 0;
+  border-top: 1px solid var(--admin-border);
+  background: rgba(255, 255, 255, .96);
+}
+
+.footer :global(.admin-button) {
+  min-width: 132px;
+}
+
+@media (max-width: 1050px) {
+  .attributeCreate {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .variantGrid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .optionGrid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 20px;
+  }
+
+  .sectionHead {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sectionHead > p {
+    width: 100%;
+  }
+
+  .grid,
+  .attributeCreate,
+  .variantGrid,
+  .mediaGrid,
+  .optionGrid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .mediaCard {
+    grid-template-columns:
+      1fr;
+  }
+
+  .mediaPreview {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .inlineField {
+    grid-template-columns:
+      1fr;
+  }
+
+  .uploadBox {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .toolbar > span {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer {
+    position: static;
+  }
+
+  .footer :global(.admin-button) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* TKB LOCALIZED ATTRIBUTE FIELDS */
+
+.attributeCreate {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(150px, .7fr)
+    minmax(120px, .55fr)
+    auto;
+
+  gap: 10px;
+
+  align-items: stretch;
+}
+
+.localizedInlineField {
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto !important;
+
+  gap: 10px !important;
+
+  align-items: stretch;
+}
+
+.attributeCreate
+input[dir="rtl"],
+.localizedInlineField
+input[dir="rtl"] {
+  text-align: right;
+}
+
+@media (
+  max-width: 1100px
+) {
+  .attributeCreate {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .attributeCreate
+  :global(.admin-button) {
+    width: 100%;
+  }
+}
+
+@media (
+  max-width: 760px
+) {
+  .attributeCreate,
+  .localizedInlineField {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .localizedInlineField
+  :global(.admin-button) {
+    width: 100%;
+  }
+}
+/* TKB EXISTING ATTRIBUTE TRANSLATION EDITOR */
+
+.translationEditor {
+  margin:
+    18px 0;
+
+  padding:
+    16px;
+
+  border:
+    1px solid
+    var(--admin-border);
+
+  background:
+    #fafafa;
+}
+
+.translationEditorHead {
+  display: flex;
+
+  align-items: center;
+  justify-content:
+    space-between;
+
+  gap: 16px;
+
+  margin-bottom:
+    12px;
+}
+
+.translationEditorHead strong {
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.translationEditorHead span {
+  color:
+    var(--admin-muted);
+
+  font-size: 9px;
+}
+
+.translationEditorGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto;
+
+  gap: 10px;
+
+  align-items: stretch;
+}
+
+.valueTranslationEditors {
+  display: grid;
+
+  gap: 8px;
+
+  margin:
+    18px 0;
+}
+
+.valueTranslationRow {
+  display: grid;
+
+  grid-template-columns:
+    minmax(110px, .55fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto;
+
+  gap: 10px;
+
+  align-items: center;
+
+  padding:
+    10px;
+
+  border:
+    1px solid
+    var(--admin-border);
+
+  background:
+    #ffffff;
+}
+
+.translationCurrent {
+  min-width: 0;
+
+  overflow: hidden;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+.translationEditorGrid
+input[dir="rtl"],
+.valueTranslationRow
+input[dir="rtl"] {
+  text-align: right;
+}
+
+@media (
+  max-width: 980px
+) {
+  .valueTranslationRow {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+  .translationCurrent {
+    grid-column:
+      1 / -1;
+  }
+}
+
+@media (
+  max-width: 760px
+) {
+  .translationEditorGrid,
+  .valueTranslationRow {
+    grid-template-columns:
+      1fr;
+  }
+
+  .translationCurrent {
+    grid-column:
+      auto;
+  }
+
+  .translationEditorGrid
+  :global(.admin-button),
+  .valueTranslationRow
+  :global(.admin-button) {
+    width: 100%;
+  }
+}
+/* =========================================================
+   TKB PRODUCT BUILDER UX V1
+   Compact / structured / editorial admin form
+   ========================================================= */
+
+.form {
+  gap: 14px;
+  margin-top: 18px;
+  padding-bottom: 84px;
+}
+
+
+/* =========================================================
+   BUILDER NAVIGATION
+   ========================================================= */
+
+.builderNav {
+  position: sticky;
+  top: 12px;
+  z-index: 20;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      6,
+      minmax(0, 1fr)
+    );
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #30392c;
+
+  background:
+    #30392c;
+
+  box-shadow:
+    0 12px 28px
+    rgba(
+      48,
+      57,
+      44,
+      .14
+    );
+}
+
+.builderNav a {
+  position: relative;
+
+  min-width: 0;
+  min-height: 58px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    0 14px;
+
+  border-right:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      .13
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .96
+    );
+
+  text-decoration: none;
+
+  transition:
+    background
+    160ms ease;
+}
+
+.builderNav a:last-child {
+  border-right: 0;
+}
+
+.builderNav a:hover {
+  background:
+    #444c3d;
+}
+
+.builderNav b {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .45
+    );
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: .1em;
+}
+
+.builderNav span {
+  overflow: hidden;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: .02em;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.builderNav em {
+  min-width: 22px;
+
+  padding:
+    4px 6px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .11
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .7
+    );
+
+  font-size: 8px;
+
+  font-style: normal;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    20px 22px 22px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #ddd9d0;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 8px 24px
+    rgba(
+      48,
+      57,
+      44,
+      .045
+    );
+}
+
+.section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 3px;
+
+  background:
+    #6d705b;
+}
+
+
+/* Different visual identity per section */
+
+.form >
+.section:nth-of-type(1)
+.sectionHead {
+  background:
+    #e8eadf;
+}
+
+.form >
+.section:nth-of-type(2)
+.sectionHead {
+  background:
+    #efe7da;
+}
+
+.form >
+.section:nth-of-type(3)
+.sectionHead {
+  background:
+    #f2eee6;
+}
+
+.form >
+.section:nth-of-type(4)
+.sectionHead {
+  background:
+    #e2e6d8;
+}
+
+.form >
+.section:nth-of-type(5)
+.sectionHead {
+  background:
+    #e8e7e1;
+}
+
+.form >
+.section:nth-of-type(6)
+.sectionHead {
+  background:
+    #eee5da;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.sectionHead {
+  margin:
+    -20px
+    -22px
+    18px;
+
+  padding:
+    14px
+    18px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      48,
+      57,
+      44,
+      .09
+    );
+}
+
+.sectionHead > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.sectionHead h2 {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    -.02em;
+
+  scroll-margin-top:
+    96px;
+}
+
+.sectionEyebrow {
+  min-width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  border:
+    1px solid
+    rgba(
+      48,
+      57,
+      44,
+      .14
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      .5
+    );
+
+  color:
+    #30392c;
+
+  font-size: 8px;
+
+  letter-spacing: .06em;
+}
+
+.sectionHead > p {
+  width:
+    min(
+      100%,
+      300px
+    );
+
+  color:
+    rgba(
+      48,
+      57,
+      44,
+      .58
+    );
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   FORM DENSITY
+   ========================================================= */
+
+.grid {
+  gap:
+    16px
+    18px;
+}
+
+.field {
+  gap: 6px;
+}
+
+.field label {
+  color:
+    rgba(
+      48,
+      57,
+      44,
+      .62
+    );
+
+  font-size: 8px;
+}
+
+.field input,
+.field select,
+.inlineField input,
+.attributeCreate input,
+.attributeCreate select {
+  min-height: 42px;
+
+  border-color:
+    #d6d2c9;
+
+  background:
+    #fffefa;
+}
+
+.field textarea {
+  min-height: 96px;
+
+  border-color:
+    #d6d2c9;
+
+  background:
+    #fffefa;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.inlineField input:focus,
+.attributeCreate input:focus,
+.attributeCreate select:focus {
+  border-color:
+    #6d705b;
+
+  box-shadow:
+    inset
+    3px
+    0
+    0
+    #6d705b;
+}
+
+
+/* =========================================================
+   COLLECTIONS
+   ========================================================= */
+
+.optionGrid {
+  gap: 8px;
+
+  border:
+    0;
+}
+
+.optionCard {
+  min-height: 56px;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px solid
+    #ddd9d0 !important;
+
+  background:
+    #fbfaf7;
+}
+
+.optionCardActive {
+  border-color:
+    #6d705b !important;
+
+  background:
+    #e8eadf;
+}
+
+
+/* =========================================================
+   ATTRIBUTES
+   ========================================================= */
+
+.attributeCreate {
+  margin-bottom: 16px;
+
+  padding:
+    12px;
+
+  border:
+    1px solid
+    #ddd9d0;
+
+  background:
+    #f7f4ee;
+}
+
+.attributeList {
+  gap: 10px;
+}
+
+.attributeBlock {
+  padding: 14px;
+
+  border-color:
+    #ddd9d0;
+
+  background:
+    #fffefa;
+}
+
+.attributeHeader {
+  margin-bottom: 10px;
+
+  padding-bottom: 10px;
+
+  border-bottom:
+    1px solid
+    #ebe7df;
+}
+
+.valueGrid {
+  margin-bottom: 12px;
+}
+
+.valueOption {
+  background:
+    #ffffff;
+}
+
+.valueOptionActive {
+  border-color:
+    #6d705b;
+
+  background:
+    #e8eadf;
+}
+
+
+/* =========================================================
+   TRANSLATION EDITORS
+   ========================================================= */
+
+.translationEditor {
+  margin:
+    12px 0;
+
+  padding:
+    12px;
+
+  background:
+    #f5f2ec;
+}
+
+.valueTranslationEditors {
+  gap: 6px;
+
+  margin:
+    12px 0;
+}
+
+.valueTranslationRow {
+  padding: 8px;
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   VARIANTS
+   ========================================================= */
+
+.toolbar {
+  margin-bottom: 12px;
+
+  padding:
+    10px;
+
+  border:
+    1px solid
+    #ddd9d0;
+
+  background:
+    #f5f2ec;
+}
+
+.variantList {
+  gap: 10px;
+}
+
+.variantCard {
+  padding: 14px;
+
+  border-color:
+    #ddd9d0;
+
+  background:
+    #fffefa;
+
+  box-shadow:
+    0 4px 14px
+    rgba(
+      48,
+      57,
+      44,
+      .035
+    );
+}
+
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
+
+.uploadBox {
+  margin-bottom: 14px;
+
+  border-color:
+    #d5d0c6;
+
+  background:
+    #f3eee5;
+}
+
+.mediaList {
+  gap: 10px;
+}
+
+.mediaCard {
+  border-color:
+    #ddd9d0;
+
+  background:
+    #fffefa;
+
+  box-shadow:
+    0 4px 14px
+    rgba(
+      48,
+      57,
+      44,
+      .035
+    );
+}
+
+
+/* =========================================================
+   MESSAGE / PERMISSION
+   ========================================================= */
+
+.formMessage {
+  border:
+    1px solid
+    rgba(
+      139,
+      57,
+      45,
+      .24
+    );
+
+  background:
+    #fff7f4;
+}
+
+.permissionNote {
+  background:
+    #f5f2ec;
+}
+
+
+/* =========================================================
+   STICKY ACTION FOOTER
+   ========================================================= */
+
+.footer {
+  z-index: 25;
+
+  margin-top: 2px;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px solid
+    #d8d4cb;
+
+  background:
+    rgba(
+      246,
+      243,
+      237,
+      .96
+    );
+
+  backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    0 -8px 24px
+    rgba(
+      48,
+      57,
+      44,
+      .06
+    );
+}
+
+.footer
+:global(.admin-button) {
+  min-width: 120px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+  max-width: 1050px
+) {
+  .builderNav {
+    display: flex;
+
+    overflow-x: auto;
+
+    overscroll-behavior-x:
+      contain;
+
+    scrollbar-width:
+      none;
+  }
+
+  .builderNav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .builderNav a {
+    flex:
+      0 0 142px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 760px
+) {
+  .form {
+    gap: 12px;
+
+    margin-top: 12px;
+
+    padding-bottom: 24px;
+  }
+
+  .builderNav {
+    top: 6px;
+  }
+
+  .builderNav a {
+    flex:
+      0 0 124px;
+
+    min-height: 52px;
+
+    padding:
+      0 11px;
+  }
+
+  .section {
+    padding:
+      16px;
+  }
+
+  .sectionHead {
+    margin:
+      -16px
+      -16px
+      14px;
+
+    padding:
+      12px
+      14px;
+
+    align-items:
+      flex-start;
+  }
+
+  .sectionHead > div {
+    gap: 9px;
+  }
+
+  .sectionHead h2 {
+    font-size: 16px;
+  }
+
+  .sectionHead > p {
+    width: 100%;
+
+    font-size: 9px;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  .attributeBlock,
+  .variantCard {
+    padding: 12px;
+  }
+
+  .footer {
+    position: sticky;
+
+    padding: 9px;
+
+    gap: 8px;
+  }
+}
+/* =========================================================
+   TKB SOFT UI PRODUCT FORM V1
+   ========================================================= */
+
+.form {
+  gap: 18px !important;
+}
+
+
+/* Section cards */
+
+.section {
+  border:
+    1px solid
+    rgba(54, 39, 28, .07) !important;
+
+  border-radius:
+    22px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    10px 10px 24px
+      rgba(45, 63, 33, .09),
+    -8px -8px 20px
+      rgba(255, 255, 255, .86) !important;
+
+  overflow:
+    hidden;
+}
+
+.section::before {
+  display:
+    none !important;
+}
+
+
+/* Section header */
+
+.sectionHead {
+  border:
+    1px solid
+    rgba(54, 39, 28, .06) !important;
+
+  border-radius:
+    17px !important;
+
+  background:
+    #efe5ca !important;
+}
+
+.sectionHead h2 {
+  color:
+    #2d3f21;
+}
+
+.sectionEyebrow {
+  border:
+    0 !important;
+
+  border-radius:
+    10px !important;
+
+  background:
+    #f1ede6 !important;
+
+  color:
+    #6d705b !important;
+
+  box-shadow:
+    3px 3px 8px
+      rgba(45, 63, 33, .07),
+    -3px -3px 8px
+      rgba(255, 255, 255, .70);
+}
+
+
+/* Fields */
+
+.field input,
+.field select,
+.field textarea,
+.inlineField input,
+.attributeCreate input,
+.attributeCreate select,
+.translationEditorGrid input,
+.valueTranslationRow input {
+  border:
+    1px solid
+    rgba(54, 39, 28, .08) !important;
+
+  border-radius:
+    13px !important;
+
+  background:
+    #f1ede6 !important;
+
+  color:
+    #2d3f21 !important;
+
+  box-shadow:
+    inset 3px 3px 8px
+      rgba(45, 63, 33, .06),
+    inset -3px -3px 8px
+      rgba(255, 255, 255, .78);
+}
+
+
+/* Collection cards */
+
+.optionGrid {
+  border:
+    0 !important;
+
+  gap:
+    10px !important;
+}
+
+.optionCard {
+  border:
+    1px solid
+    rgba(54, 39, 28, .07) !important;
+
+  border-radius:
+    15px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    5px 5px 13px
+      rgba(45, 63, 33, .07),
+    -5px -5px 13px
+      rgba(255, 255, 255, .75);
+}
+
+.optionCardActive {
+  background:
+    #efe5ca !important;
+
+  border-color:
+    #6d705b !important;
+}
+
+
+/* Attribute / variant cards */
+
+.attributeCreate,
+.attributeBlock,
+.variantCard,
+.translationEditor,
+.valueTranslationRow,
+.toolbar,
+.uploadBox,
+.mediaCard {
+  border:
+    1px solid
+    rgba(54, 39, 28, .07) !important;
+
+  border-radius:
+    17px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    6px 6px 15px
+      rgba(45, 63, 33, .07),
+    -6px -6px 15px
+      rgba(255, 255, 255, .77);
+}
+
+.attributeHeader {
+  border-color:
+    rgba(54, 39, 28, .08) !important;
+}
+
+
+/* Attribute values */
+
+.valueOption {
+  border:
+    1px solid
+    rgba(54, 39, 28, .08) !important;
+
+  border-radius:
+    12px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    3px 3px 8px
+      rgba(45, 63, 33, .06),
+    -3px -3px 8px
+      rgba(255, 255, 255, .72);
+}
+
+.valueOptionActive {
+  border-color:
+    #6d705b !important;
+
+  background:
+    #efe5ca !important;
+
+  box-shadow:
+    inset 2px 2px 6px
+      rgba(45, 63, 33, .06),
+    inset -2px -2px 6px
+      rgba(255, 255, 255, .65);
+}
+
+
+/* Product Builder nav if present */
+
+.builderNav {
+  border:
+    1px solid
+    rgba(54, 39, 28, .07) !important;
+
+  border-radius:
+    18px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    8px 8px 20px
+      rgba(45, 63, 33, .08),
+    -7px -7px 18px
+      rgba(255, 255, 255, .82) !important;
+
+  overflow:
+    hidden;
+}
+
+.builderNav a {
+  border-color:
+    rgba(54, 39, 28, .06) !important;
+
+  color:
+    #2d3f21 !important;
+}
+
+.builderNav a:hover {
+  background:
+    #efe5ca !important;
+}
+
+.builderNav b {
+  color:
+    #6d705b !important;
+}
+
+.builderNav em {
+  border-radius:
+    9px;
+
+  background:
+    #efe5ca !important;
+
+  color:
+    #2d3f21 !important;
+}
+
+
+/* Media */
+
+.mediaPreview {
+  border-radius:
+    14px;
+
+  overflow:
+    hidden;
+
+  background:
+    #efe5ca;
+}
+
+
+/* Sticky footer */
+
+.footer {
+  border:
+    1px solid
+    rgba(54, 39, 28, .08) !important;
+
+  border-radius:
+    18px !important;
+
+  background:
+    rgba(241, 237, 230, .94) !important;
+
+  box-shadow:
+    8px 8px 18px
+      rgba(45, 63, 33, .08),
+    -6px -6px 16px
+      rgba(255, 255, 255, .8) !important;
+
+  backdrop-filter:
+    blur(14px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .section {
+    border-radius:
+      18px !important;
+  }
+
+  .sectionHead,
+  .attributeBlock,
+  .variantCard,
+  .mediaCard {
+    border-radius:
+      14px !important;
+  }
+}
+
+/* =========================================================
+   TKB PRODUCT FORM DENSITY V2
+   ========================================================= */
+
+
+/* Overall rhythm */
+
+.form {
+  gap: 14px !important;
+  margin-top: 14px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Builder navigation
+   --------------------------------------------------------- */
+
+.builderNav a {
+  min-height: 48px !important;
+
+  padding:
+    0 12px !important;
+
+  gap: 7px !important;
+}
+
+.builderNav b {
+  font-size: 8px !important;
+}
+
+.builderNav span {
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+}
+
+.builderNav em {
+  min-width: 20px;
+
+  padding:
+    3px 5px !important;
+
+  font-size: 7.5px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Main section
+   --------------------------------------------------------- */
+
+.section {
+  padding:
+    16px 18px 18px !important;
+
+  border-radius:
+    20px !important;
+}
+
+
+/* Section heading */
+
+.sectionHead {
+  min-height: 48px;
+
+  margin:
+    -16px
+    -18px
+    14px !important;
+
+  padding:
+    10px
+    14px !important;
+
+  gap:
+    16px !important;
+}
+
+.sectionHead > div {
+  gap:
+    9px !important;
+}
+
+.sectionHead h2 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+
+  line-height: 1.2;
+
+  letter-spacing:
+    -.02em !important;
+}
+
+.sectionEyebrow {
+  min-width: 25px !important;
+
+  width: 25px;
+  height: 25px !important;
+
+  font-size: 7.5px !important;
+}
+
+.sectionHead > p {
+  max-width: 280px;
+
+  font-size: 8.5px !important;
+
+  line-height: 1.45 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Form grid
+   --------------------------------------------------------- */
+
+.grid {
+  gap:
+    12px
+    16px !important;
+}
+
+.field {
+  gap:
+    5px !important;
+}
+
+
+/* Labels */
+
+.field label {
+  font-size: 8.5px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing:
+    .065em !important;
+
+  line-height: 1.2;
+}
+
+
+/* ---------------------------------------------------------
+   Inputs
+   --------------------------------------------------------- */
+
+.field input,
+.field select,
+.inlineField input,
+.attributeCreate input,
+.attributeCreate select,
+.translationEditorGrid input,
+.valueTranslationRow input {
+  min-height:
+    37px !important;
+
+  padding:
+    0 11px !important;
+
+  border-radius:
+    11px !important;
+
+  font-size:
+    11px !important;
+}
+
+
+/* Text areas */
+
+.field textarea {
+  min-height:
+    76px !important;
+
+  padding:
+    9px 11px !important;
+
+  border-radius:
+    11px !important;
+
+  font-size:
+    11px !important;
+
+  line-height:
+    1.55 !important;
+}
+
+
+/* Long description can still be resized manually */
+
+.field textarea {
+  resize:
+    vertical !important;
+}
+
+
+/* ---------------------------------------------------------
+   Brand inline field
+   --------------------------------------------------------- */
+
+.inlineField {
+  gap:
+    7px !important;
+}
+
+.inlineField
+:global(.admin-button) {
+  min-height:
+    37px !important;
+
+  padding:
+    0 13px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Featured Product
+   Convert plain checkbox into compact soft toggle
+   --------------------------------------------------------- */
+
+.checkboxField {
+  width:
+    fit-content !important;
+
+  min-width:
+    185px;
+
+  min-height:
+    38px !important;
+
+  display:
+    inline-flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    10px !important;
+
+  align-self:
+    start !important;
+
+  padding:
+    0 12px !important;
+
+  border:
+    1px solid
+    rgba(54, 39, 28, .07) !important;
+
+  border-radius:
+    12px !important;
+
+  background:
+    #f1ede6 !important;
+
+  color:
+    #2d3f21 !important;
+
+  box-shadow:
+    4px 4px 10px
+      rgba(45, 63, 33, .06),
+    -4px -4px 10px
+      rgba(255, 255, 255, .72);
+
+  font-size:
+    9.5px !important;
+
+  font-weight:
+    500;
+
+  cursor:
+    pointer;
+}
+
+.checkboxField input {
+  appearance:
+    none;
+
+  -webkit-appearance:
+    none;
+
+  position:
+    relative;
+
+  flex:
+    0 0 auto;
+
+  width:
+    34px !important;
+
+  height:
+    19px !important;
+
+  margin:
+    0 !important;
+
+  border:
+    0 !important;
+
+  border-radius:
+    999px !important;
+
+  outline:
+    none;
+
+  background:
+    rgba(45, 63, 33, .14);
+
+  box-shadow:
+    inset 2px 2px 5px
+      rgba(45, 63, 33, .12);
+
+  cursor:
+    pointer;
+
+  transition:
+    background .18s ease;
+}
+
+.checkboxField input::after {
+  content: "";
+
+  position:
+    absolute;
+
+  top:
+    3px;
+  left:
+    3px;
+
+  width:
+    13px;
+  height:
+    13px;
+
+  border-radius:
+    50%;
+
+  background:
+    #f1ede6;
+
+  box-shadow:
+    2px 2px 5px
+      rgba(45, 63, 33, .16);
+
+  transition:
+    transform .18s ease;
+}
+
+.checkboxField input:checked {
+  background:
+    #6d705b;
+}
+
+.checkboxField input:checked::after {
+  transform:
+    translateX(15px);
+}
+
+
+/* ---------------------------------------------------------
+   Collections
+   --------------------------------------------------------- */
+
+.optionGrid {
+  gap:
+    7px !important;
+}
+
+.optionCard {
+  min-height:
+    50px !important;
+
+  padding:
+    8px 10px !important;
+
+  border-radius:
+    12px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Attributes
+   --------------------------------------------------------- */
+
+.attributeCreate {
+  gap:
+    8px !important;
+
+  margin-bottom:
+    12px !important;
+
+  padding:
+    10px !important;
+
+  border-radius:
+    14px !important;
+}
+
+.attributeList {
+  gap:
+    9px !important;
+}
+
+.attributeBlock {
+  padding:
+    12px !important;
+
+  border-radius:
+    14px !important;
+}
+
+.attributeHeader {
+  margin-bottom:
+    8px !important;
+
+  padding-bottom:
+    8px !important;
+}
+
+.attributeHeader strong {
+  font-size:
+    10.5px !important;
+}
+
+.attributeHeader small,
+.attributeHeader > span {
+  font-size:
+    8px !important;
+}
+
+.valueGrid {
+  gap:
+    6px !important;
+
+  margin-bottom:
+    9px !important;
+}
+
+.valueOption {
+  padding:
+    6px 9px !important;
+
+  border-radius:
+    10px !important;
+
+  font-size:
+    9px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Translation editor
+   --------------------------------------------------------- */
+
+.translationEditor {
+  margin:
+    9px 0 !important;
+
+  padding:
+    10px !important;
+
+  border-radius:
+    13px !important;
+}
+
+.translationEditorHead {
+  margin-bottom:
+    8px !important;
+}
+
+.translationEditorHead strong {
+  font-size:
+    9px !important;
+}
+
+.translationEditorHead span {
+  font-size:
+    8px !important;
+}
+
+.translationEditorGrid {
+  gap:
+    7px !important;
+}
+
+.valueTranslationEditors {
+  gap:
+    6px !important;
+
+  margin:
+    9px 0 !important;
+}
+
+.valueTranslationRow {
+  gap:
+    7px !important;
+
+  padding:
+    7px !important;
+
+  border-radius:
+    11px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Variant area
+   --------------------------------------------------------- */
+
+.toolbar {
+  gap:
+    8px !important;
+
+  margin-bottom:
+    10px !important;
+
+  padding:
+    8px 10px !important;
+
+  border-radius:
+    13px !important;
+}
+
+.toolbar > span {
+  font-size:
+    8.5px !important;
+}
+
+.variantList {
+  gap:
+    9px !important;
+}
+
+.variantCard {
+  padding:
+    11px !important;
+
+  border-radius:
+    14px !important;
+}
+
+.variantGrid {
+  gap:
+    10px 12px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Media
+   --------------------------------------------------------- */
+
+.uploadBox {
+  margin-bottom:
+    10px !important;
+
+  padding:
+    11px !important;
+
+  border-radius:
+    14px !important;
+}
+
+.mediaList {
+  gap:
+    8px !important;
+}
+
+.mediaCard {
+  border-radius:
+    14px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Sticky footer
+   --------------------------------------------------------- */
+
+.footer {
+  padding:
+    8px 10px !important;
+
+  border-radius:
+    14px !important;
+}
+
+.footer
+:global(.admin-button) {
+  min-width:
+    108px !important;
+}
+
+
+/* ---------------------------------------------------------
+   Desktop — keep layout dense
+   --------------------------------------------------------- */
+
+@media (min-width: 1100px) {
+  .section {
+    padding:
+      15px 18px 17px !important;
+  }
+
+  .sectionHead {
+    margin:
+      -15px
+      -18px
+      13px !important;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .section {
+    padding:
+      14px !important;
+  }
+
+  .sectionHead {
+    margin:
+      -14px
+      -14px
+      12px !important;
+  }
+
+  .checkboxField {
+    width:
+      100% !important;
+  }
+}
+
+/* =========================================================
+   TKB PRODUCT UX V3
+   ========================================================= */
+
+
+/* Allow custom dropdowns to escape cards */
+
+.section,
+.attributeBlock,
+.variantCard,
+.mediaCard,
+.attributeCreate {
+  overflow:
+    visible !important;
+}
+
+
+/* =========================================================
+   STRONGER SECTION HIERARCHY
+   ========================================================= */
+
+.section {
+  margin-bottom:
+    5px;
+
+  border-color:
+    rgba(45, 63, 33, .10) !important;
+}
+
+.sectionHead {
+  background:
+    #6d705b !important;
+
+  border:
+    0 !important;
+
+  box-shadow:
+    0 5px 15px
+    rgba(45, 63, 33, .12);
+}
+
+.sectionHead h2 {
+  color:
+    #f1ede6 !important;
+}
+
+.sectionHead > p {
+  color:
+    rgba(241, 237, 230, .72) !important;
+}
+
+.sectionEyebrow {
+  background:
+    #efe5ca !important;
+
+  color:
+    #2d3f21 !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* =========================================================
+   SOFT CHECKBOXES
+   ========================================================= */
+
+.optionCard input[type="checkbox"],
+.valueOption input[type="checkbox"] {
+  appearance:
+    none;
+
+  -webkit-appearance:
+    none;
+
+  flex:
+    0 0 auto;
+
+  width:
+    20px !important;
+
+  height:
+    20px !important;
+
+  margin:
+    0 !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .16) !important;
+
+  border-radius:
+    7px !important;
+
+  outline:
+    none;
+
+  background-color:
+    #f1ede6;
+
+  background-position:
+    center;
+
+  background-repeat:
+    no-repeat;
+
+  background-size:
+    12px 12px;
+
+  box-shadow:
+    inset 2px 2px 5px
+      rgba(45, 63, 33, .08),
+    inset -2px -2px 5px
+      rgba(255, 255, 255, .72);
+
+  cursor:
+    pointer;
+
+  transition:
+    background .16s ease,
+    border-color .16s ease,
+    box-shadow .16s ease,
+    transform .16s ease;
+}
+
+.optionCard input[type="checkbox"]:checked,
+.valueOption input[type="checkbox"]:checked {
+  border-color:
+    #6d705b !important;
+
+  background-color:
+    #6d705b;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23f1ede6' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  box-shadow:
+    3px 3px 7px
+      rgba(45, 63, 33, .16);
+}
+
+.optionCard:hover
+input[type="checkbox"],
+.valueOption:hover
+input[type="checkbox"] {
+  transform:
+    translateY(-1px);
+}
+
+.optionCard {
+  grid-template-columns:
+    20px
+    minmax(0, 1fr) !important;
+}
+
+.optionCardActive,
+.valueOptionActive {
+  border-color:
+    rgba(109, 112, 91, .50) !important;
+
+  background:
+    #efe5ca !important;
+}
+
+
+/* =========================================================
+   TRANSLATION ACCORDIONS
+   ========================================================= */
+
+.translationAccordion,
+.translationGroup,
+.valueTranslationItem {
+  border:
+    1px solid
+    rgba(45, 63, 33, .08);
+
+  border-radius:
+    13px;
+
+  background:
+    #f1ede6;
+}
+
+.translationAccordion,
+.translationGroup {
+  margin:
+    8px 0 !important;
+
+  padding:
+    0 !important;
+
+  box-shadow:
+    4px 4px 11px
+      rgba(45, 63, 33, .06),
+    -4px -4px 11px
+      rgba(255, 255, 255, .70);
+}
+
+.translationSummary,
+.valueTranslationSummary {
+  list-style:
+    none;
+
+  cursor:
+    pointer;
+
+  user-select:
+    none;
+}
+
+.translationSummary::-webkit-details-marker,
+.valueTranslationSummary::-webkit-details-marker {
+  display:
+    none;
+}
+
+.translationSummary {
+  min-height:
+    42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap:
+    14px;
+
+  padding:
+    0 12px;
+}
+
+.translationSummary > div {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    10px;
+}
+
+.translationSummary strong {
+  color:
+    #2d3f21;
+
+  font-size:
+    9.5px;
+
+  font-weight:
+    600;
+}
+
+.translationSummary
+span:not(.translationChevron) {
+  color:
+    rgba(45, 63, 33, .48);
+
+  font-size:
+    8px;
+}
+
+.translationChevron {
+  flex:
+    0 0 auto;
+
+  color:
+    #6d705b;
+
+  font-size:
+    11px;
+
+  transition:
+    transform .18s ease;
+}
+
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.translationGroup[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    rotate(180deg);
+}
+
+.translationEditorGrid {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto !important;
+
+  gap:
+    7px !important;
+
+  padding:
+    0 10px 10px;
+}
+
+.translationGroup {
+  overflow:
+    hidden;
+}
+
+.valueTranslationEditors {
+  gap:
+    6px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 9px 9px;
+}
+
+.valueTranslationItem {
+  overflow:
+    hidden;
+
+  box-shadow:
+    none;
+}
+
+.valueTranslationSummary {
+  min-height:
+    38px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(100px, .7fr)
+    minmax(0, 1fr)
+    auto;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    0 10px;
+}
+
+.valueTranslationSummary small {
+  min-width: 0;
+
+  overflow:
+    hidden;
+
+  color:
+    rgba(45, 63, 33, .46);
+
+  font-size:
+    8px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+.valueTranslationRow {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto !important;
+
+  gap:
+    7px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    8px !important;
+
+  border:
+    0 !important;
+
+  border-top:
+    1px solid
+    rgba(45, 63, 33, .07) !important;
+
+  border-radius:
+    0 !important;
+
+  box-shadow:
+    none !important;
+}
+
+
+/* Attribute value area */
+
+.valueGrid {
+  padding:
+    3px 0;
+}
+
+
+/* =========================================================
+   MOBILE ACCORDIONS
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .translationEditorGrid,
+  .valueTranslationRow {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .valueTranslationSummary {
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+  }
+
+  .valueTranslationSummary small {
+    display:
+      none;
+  }
+}
+
+/* =========================================================
+   TKB TRANSLATION UX FIX V4
+   ========================================================= */
+
+
+/* Attribute translation — always visible */
+
+.translationEditor {
+  margin:
+    9px 0 10px !important;
+
+  padding:
+    10px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .08) !important;
+
+  border-radius:
+    13px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    4px 4px 10px
+      rgba(45, 63, 33, .055),
+    -4px -4px 10px
+      rgba(255, 255, 255, .68) !important;
+}
+
+.translationEditorHead {
+  min-height:
+    25px;
+
+  margin-bottom:
+    7px !important;
+}
+
+.translationEditorHead strong {
+  color:
+    #2d3f21;
+
+  font-size:
+    10px !important;
+
+  font-weight:
+    600;
+}
+
+.translationEditorHead span {
+  color:
+    rgba(45, 63, 33, .48);
+
+  font-size:
+    8.5px !important;
+}
+
+
+/* Attribute EN / FA */
+
+.translationEditorGrid {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto !important;
+
+  align-items:
+    center;
+
+  gap:
+    7px !important;
+
+  padding:
+    0 !important;
+}
+
+
+/* =========================================================
+   VALUE TRANSLATIONS — ONE ACCORDION ONLY
+   ========================================================= */
+
+.translationGroup {
+  margin:
+    8px 0 10px !important;
+
+  padding:
+    0 !important;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .09);
+
+  border-radius:
+    13px;
+
+  background:
+    #f1ede6;
+
+  box-shadow:
+    4px 4px 11px
+      rgba(45, 63, 33, .055),
+    -4px -4px 11px
+      rgba(255, 255, 255, .68);
+}
+
+.translationSummary {
+  min-height:
+    42px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+  justify-content:
+    space-between;
+
+  gap:
+    12px;
+
+  padding:
+    0 12px;
+
+  list-style:
+    none;
+
+  cursor:
+    pointer;
+
+  user-select:
+    none;
+}
+
+.translationSummary::-webkit-details-marker {
+  display:
+    none;
+}
+
+.translationSummary > div {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+}
+
+.translationSummary strong {
+  color:
+    #2d3f21;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+}
+
+.translationSummary
+span:not(.translationChevron) {
+  color:
+    rgba(45, 63, 33, .48);
+
+  font-size:
+    8.5px;
+}
+
+.translationChevron {
+  color:
+    #6d705b;
+
+  font-size:
+    12px;
+
+  transition:
+    transform .18s ease;
+}
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  transform:
+    rotate(180deg);
+}
+
+
+/* List */
+
+.valueTranslationEditors {
+  display:
+    grid;
+
+  gap: 0 !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  border-top:
+    1px solid
+    rgba(45, 63, 33, .08);
+}
+
+
+/* Each translation = normal row, NOT accordion */
+
+.valueTranslationRow {
+  display:
+    grid !important;
+
+  grid-template-columns:
+    minmax(130px, .55fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    auto !important;
+
+  align-items:
+    center;
+
+  gap:
+    8px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    7px 9px !important;
+
+  border:
+    0 !important;
+
+  border-bottom:
+    1px solid
+    rgba(45, 63, 33, .07) !important;
+
+  border-radius:
+    0 !important;
+
+  background:
+    transparent !important;
+
+  box-shadow:
+    none !important;
+}
+
+.valueTranslationRow:last-child {
+  border-bottom:
+    0 !important;
+}
+
+.translationValueLabel {
+  min-width: 0;
+
+  padding:
+    0 4px;
+}
+
+.translationValueLabel strong {
+  display: block;
+
+  overflow:
+    hidden;
+
+  color:
+    #2d3f21;
+
+  font-size:
+    10.5px;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.4;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* Compact inputs */
+
+.valueTranslationRow input,
+.translationEditorGrid input {
+  min-height:
+    35px !important;
+
+  font-size:
+    11px !important;
+}
+
+
+/* Persian must not look tiny */
+
+.valueTranslationRow input[dir="rtl"],
+.translationEditorGrid input[dir="rtl"],
+.localizedInlineField input[dir="rtl"] {
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size:
+    12px !important;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.5;
+}
+
+
+/* Save buttons */
+
+.valueTranslationRow
+:global(.admin-button) {
+  min-width:
+    64px !important;
+
+  min-height:
+    35px !important;
+
+  padding:
+    0 11px !important;
+}
+
+
+/* Old nested accordion styling is no longer used */
+
+.valueTranslationItem,
+.valueTranslationSummary {
+  display:
+    contents;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .valueTranslationRow {
+    grid-template-columns:
+      minmax(100px, .6fr)
+      minmax(0, 1fr)
+      minmax(0, 1fr)
+      auto !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .translationEditorGrid,
+  .valueTranslationRow {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .translationValueLabel {
+    padding:
+      3px 2px;
+  }
+}
+
+/* =========================================================
+   TKB ATTRIBUTE HIERARCHY V5
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Clear separation between Color / Capacity / etc.
+   --------------------------------------------------------- */
+
+.attributeList {
+  display: grid;
+
+  gap: 20px !important;
+}
+
+.attributeBlock {
+  position: relative;
+
+  padding:
+    0 0 12px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .17) !important;
+
+  border-radius:
+    16px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    7px 8px 18px
+      rgba(45, 63, 33, .085),
+    -5px -5px 15px
+      rgba(255, 255, 255, .72) !important;
+}
+
+/* Strong identity stripe */
+
+.attributeBlock::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  top: 11px;
+  bottom: 11px;
+  left: -1px;
+
+  width: 4px;
+
+  border-radius:
+    0 4px 4px 0;
+
+  background:
+    #6d705b;
+}
+
+
+/* ---------------------------------------------------------
+   Attribute header
+   --------------------------------------------------------- */
+
+.attributeHeader {
+  min-height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin:
+    0 0 12px !important;
+
+  padding:
+    10px
+    14px
+    10px
+    17px !important;
+
+  border-bottom:
+    1px solid
+    rgba(45, 63, 33, .12) !important;
+
+  border-radius:
+    15px 15px 0 0;
+
+  background:
+    #efe5ca;
+}
+
+.attributeHeader > div {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.attributeHeader strong {
+  color:
+    #2d3f21;
+
+  font-size:
+    12px !important;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    -.01em;
+}
+
+.attributeHeader small {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 22px;
+
+  padding:
+    0 7px;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .11);
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(241, 237, 230, .72);
+
+  color:
+    rgba(45, 63, 33, .55);
+
+  font-size:
+    8px !important;
+
+  line-height: 1;
+}
+
+.attributeHeader > span {
+  flex:
+    0 0 auto;
+
+  min-height: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    0 9px;
+
+  border-radius:
+    999px;
+
+  background:
+    #6d705b;
+
+  color:
+    #f1ede6;
+
+  font-size:
+    8.5px !important;
+
+  font-weight:
+    600;
+}
+
+
+/* ---------------------------------------------------------
+   Values become their own visual zone
+   --------------------------------------------------------- */
+
+.attributeBlock > .valueGrid {
+  margin:
+    0 12px 10px !important;
+
+  padding:
+    10px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .09);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(239, 229, 202, .34);
+}
+
+.valueGrid {
+  gap:
+    7px !important;
+}
+
+.valueOption {
+  min-height:
+    34px;
+
+  padding:
+    6px 9px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .12) !important;
+
+  border-radius:
+    10px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .04),
+    -2px -2px 6px
+      rgba(255, 255, 255, .55) !important;
+
+  color:
+    #2d3f21;
+
+  font-size:
+    9.5px !important;
+
+  transition:
+    border-color .15s ease,
+    background .15s ease,
+    box-shadow .15s ease,
+    transform .15s ease;
+}
+
+.valueOption:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(109, 112, 91, .48) !important;
+}
+
+.valueOptionActive {
+  border-color:
+    #6d705b !important;
+
+  background:
+    #efe5ca !important;
+
+  box-shadow:
+    inset 2px 2px 5px
+      rgba(45, 63, 33, .06),
+    inset -2px -2px 5px
+      rgba(255, 255, 255, .45) !important;
+
+  font-weight:
+    600;
+}
+
+
+/* ---------------------------------------------------------
+   Attribute translations = separate sub-card
+   --------------------------------------------------------- */
+
+.attributeBlock > .translationEditor {
+  margin:
+    0 12px 10px !important;
+
+  padding:
+    10px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .10) !important;
+
+  border-left:
+    3px solid
+    #6d705b !important;
+
+  border-radius:
+    12px !important;
+
+  background:
+    rgba(241, 237, 230, .86) !important;
+
+  box-shadow:
+    none !important;
+}
+
+.translationEditorHead {
+  padding:
+    0 2px
+    7px;
+
+  border-bottom:
+    1px solid
+    rgba(45, 63, 33, .07);
+}
+
+.translationEditorHead strong {
+  color:
+    #2d3f21;
+
+  font-size:
+    9.5px !important;
+
+  letter-spacing:
+    .015em;
+}
+
+
+/* ---------------------------------------------------------
+   Value translations = another clearly separate sub-card
+   --------------------------------------------------------- */
+
+.attributeBlock > .translationGroup {
+  margin:
+    0 12px 10px !important;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .11) !important;
+
+  border-left:
+    3px solid
+    #6d705b !important;
+
+  border-radius:
+    12px !important;
+
+  background:
+    #f1ede6 !important;
+
+  box-shadow:
+    none !important;
+}
+
+.translationGroup > .translationSummary {
+  min-height:
+    40px;
+
+  background:
+    rgba(239, 229, 202, .30);
+}
+
+.translationGroup[open]
+> .translationSummary {
+  border-bottom:
+    1px solid
+    rgba(45, 63, 33, .08);
+
+  background:
+    #efe5ca;
+}
+
+.translationSummary strong {
+  font-size:
+    9.5px !important;
+}
+
+.translationSummary
+span:not(.translationChevron) {
+  font-size:
+    8.5px !important;
+}
+
+
+/* Translation rows easier to scan */
+
+.valueTranslationRow {
+  min-height:
+    48px;
+
+  padding:
+    6px 9px !important;
+}
+
+.valueTranslationRow:nth-child(even) {
+  background:
+    rgba(239, 229, 202, .18) !important;
+}
+
+.translationValueLabel strong {
+  font-size:
+    10.5px !important;
+
+  color:
+    #2d3f21;
+}
+
+
+/* ---------------------------------------------------------
+   Add-value row = footer/action zone
+   --------------------------------------------------------- */
+
+.attributeBlock >
+.localizedInlineField {
+  margin:
+    0 12px !important;
+
+  padding:
+    10px !important;
+
+  border:
+    1px dashed
+    rgba(45, 63, 33, .20);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(239, 229, 202, .18);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .attributeList {
+    gap:
+      15px !important;
+  }
+
+  .attributeHeader {
+    align-items:
+      flex-start;
+
+    padding:
+      10px 12px
+      10px 15px !important;
+  }
+
+  .attributeHeader > div {
+    flex-wrap:
+      wrap;
+  }
+
+  .attributeBlock >
+  .translationEditor,
+  .attributeBlock >
+  .translationGroup,
+  .attributeBlock >
+  .valueGrid,
+  .attributeBlock >
+  .localizedInlineField {
+    margin-left:
+      9px !important;
+
+    margin-right:
+      9px !important;
+  }
+}
+
+/* =========================================================
+   TKB ACCORDION CHEVRON V6
+   ========================================================= */
+
+.translationChevron {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  border-radius: 9px;
+
+  background:
+    #efe5ca;
+
+  color:
+    #2d3f21 !important;
+
+  font-size: 0 !important;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .08),
+    -2px -2px 6px
+      rgba(255, 255, 255, .58);
+
+  transform:
+    none !important;
+
+  transition:
+    background .16s ease,
+    color .16s ease,
+    transform .16s ease;
+}
+
+.translationChevron::before {
+  content: ">";
+
+  display: block;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* OPEN */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  background:
+    #6d705b;
+
+  color:
+    #f1ede6 !important;
+
+  transform:
+    none !important;
+}
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron::before {
+  content: "<";
+}
+
+
+/* Remove any old rotation rules */
+
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    none !important;
+}
+
+
+/* Hover */
+
+.translationSummary:hover
+.translationChevron {
+  background:
+    #6d705b;
+
+  color:
+    #f1ede6 !important;
+}
+
+/* =========================================================
+   TKB ACCORDION VERTICAL CHEVRON V7
+   ========================================================= */
+
+.translationChevron {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  border-radius: 9px;
+
+  background:
+    #efe5ca;
+
+  color:
+    #2d3f21 !important;
+
+  font-size:
+    0 !important;
+
+  line-height: 1;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .08),
+    -2px -2px 6px
+      rgba(255, 255, 255, .58);
+
+  transform:
+    none !important;
+
+  transition:
+    background .16s ease,
+    color .16s ease,
+    transform .16s ease;
+}
+
+.translationChevron::before {
+  content: "⌄";
+
+  display: block;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: .8;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* OPEN STATE */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  background:
+    #6d705b;
+
+  color:
+    #f1ede6 !important;
+
+  transform:
+    none !important;
+}
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron::before {
+  content: "⌃";
+
+  transform:
+    translateY(2px);
+}
+
+
+/* Remove old rotation behavior */
+
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    none !important;
+}
+
+
+/* Hover */
+
+.translationSummary:hover
+.translationChevron {
+  background:
+    #6d705b;
+
+  color:
+    #f1ede6 !important;
+}
+
+/* =========================================================
+   TKB CLEAN ACCORDION CHEVRON V8
+   ========================================================= */
+
+.translationChevron {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .08);
+
+  border-radius:
+    9px;
+
+  background:
+    #f1ede6;
+
+  color:
+    #2d3f21 !important;
+
+  font-size:
+    0 !important;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .06),
+    -2px -2px 6px
+      rgba(255, 255, 255, .58);
+
+  transform:
+    none !important;
+
+  transition:
+    background .16s ease,
+    border-color .16s ease;
+}
+
+
+/* clean down chevron */
+
+.translationChevron::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-right:
+    2px solid
+    currentColor;
+
+  border-bottom:
+    2px solid
+    currentColor;
+
+  transform:
+    translateY(-2px)
+    rotate(45deg);
+
+  transition:
+    transform .18s ease;
+}
+
+
+/* open = up */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron::before {
+  transform:
+    translateY(2px)
+    rotate(225deg);
+}
+
+
+/* open state */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  background:
+    #efe5ca;
+
+  border-color:
+    rgba(109, 112, 91, .22);
+
+  color:
+    #2d3f21 !important;
+}
+
+
+/* hover */
+
+.translationSummary:hover
+.translationChevron {
+  background:
+    #efe5ca;
+
+  border-color:
+    rgba(109, 112, 91, .25);
+
+  color:
+    #2d3f21 !important;
+}
+
+
+/* kill old glyph / rotation styles */
+
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    none !important;
+}
+
+/* =========================================================
+   TKB PERFECT CHEVRON V9
+   ========================================================= */
+
+.translationChevron {
+  position: relative;
+
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .10);
+
+  border-radius: 9px;
+
+  background:
+    #f1ede6;
+
+  color:
+    #2d3f21 !important;
+
+  font-size: 0 !important;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .06),
+    -2px -2px 6px
+      rgba(255, 255, 255, .55);
+
+  transform: none !important;
+}
+
+
+/* remove all previous arrow construction */
+
+.translationChevron::before,
+.translationChevron::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 8px;
+  height: 2px;
+
+  border: 0 !important;
+
+  border-radius: 999px;
+
+  background:
+    currentColor;
+
+  transition:
+    transform .18s ease;
+}
+
+
+/* CLOSED — down */
+
+.translationChevron::before {
+  left: 6px;
+
+  transform:
+    translateY(-1px)
+    rotate(45deg);
+}
+
+.translationChevron::after {
+  right: 6px;
+
+  transform:
+    translateY(-1px)
+    rotate(-45deg);
+}
+
+
+/* OPEN — up */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron::before {
+  transform:
+    translateY(1px)
+    rotate(-45deg);
+}
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron::after {
+  transform:
+    translateY(1px)
+    rotate(45deg);
+}
+
+
+/* keep open state subtle */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  background:
+    #efe5ca;
+
+  color:
+    #2d3f21 !important;
+
+  transform:
+    none !important;
+}
+
+
+/* hover */
+
+.translationSummary:hover
+.translationChevron {
+  border-color:
+    rgba(109, 112, 91, .30);
+
+  background:
+    #efe5ca;
+}
+
+
+/* kill all old rotations */
+
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    none !important;
+}
+
+/* =========================================================
+   TKB SVG ACCORDION CHEVRON FINAL
+   ========================================================= */
+
+.translationChevron {
+  width: 28px !important;
+  height: 28px !important;
+
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  position: relative;
+
+  border:
+    1px solid
+    rgba(45, 63, 33, .10);
+
+  border-radius: 9px;
+
+  background:
+    #f1ede6;
+
+  color:
+    #2d3f21 !important;
+
+  font-size: 0 !important;
+
+  box-shadow:
+    2px 2px 6px
+      rgba(45, 63, 33, .055),
+    -2px -2px 6px
+      rgba(255, 255, 255, .55);
+
+  transform:
+    none !important;
+}
+
+
+/* Completely remove every old CSS arrow */
+
+.translationChevron::before,
+.translationChevron::after {
+  content:
+    none !important;
+
+  display:
+    none !important;
+}
+
+
+/* Actual SVG */
+
+.translationChevron svg {
+  width: 15px !important;
+  height: 15px !important;
+
+  display: block;
+
+  overflow: visible;
+
+  transform:
+    rotate(0deg);
+
+  transform-origin:
+    center;
+
+  transition:
+    transform .2s ease;
+}
+
+
+/* OPEN = point upward */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron svg {
+  transform:
+    rotate(180deg);
+}
+
+
+/* Open state */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron {
+  background:
+    #efe5ca;
+
+  border-color:
+    rgba(109, 112, 91, .22);
+
+  color:
+    #2d3f21 !important;
+}
+
+
+/* Hover */
+
+.translationSummary:hover
+.translationChevron {
+  background:
+    #efe5ca;
+
+  border-color:
+    rgba(109, 112, 91, .28);
+}
+
+
+/* Kill every old transform rule */
+
+.translationGroup[open]
+> .translationSummary
+.translationChevron,
+.translationAccordion[open]
+> .translationSummary
+.translationChevron,
+.valueTranslationItem[open]
+> .valueTranslationSummary
+.translationChevron {
+  transform:
+    none !important;
+}
+
+/* =========================================================
+   TKB DANA FORM TYPOGRAPHY FINAL
+   ========================================================= */
+
+.valueTranslationRow input[dir="rtl"],
+.translationEditorGrid input[dir="rtl"],
+.localizedInlineField input[dir="rtl"] {
+  font-family:
+    var(--font-dana),
+    Arial,
+    sans-serif !important;
+
+  font-size:
+    12px !important;
+
+  font-weight:
+    400;
+
+  line-height:
+    1.7;
+
+  letter-spacing:
+    0 !important;
+}
+
+
+/* Any Persian content inside product form */
+
+.form [lang="fa"],
+.form [dir="rtl"] {
+  font-family:
+    var(--font-dana),
+    Arial,
+    sans-serif !important;
+
+  letter-spacing:
+    0 !important;
+}
+
+
+/* English stays identical to storefront */
+
+.form [lang="en"],
+.form [dir="ltr"] {
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif !important;
+}
+
+
+/* Labels and helper text use mixed fallback safely */
+
+.field label,
+.translationEditorHead,
+.translationSummary,
+.translationValueLabel,
+.attributeHeader,
+.valueOption,
+.optionCard {
+  font-family:
+    "Montserrat",
+    var(--font-dana),
+    Arial,
+    sans-serif;
+}
+
+/* =========================================================
+   TKB PRODUCT CARD MEDIA BADGES
+   ========================================================= */
+
+.mediaPreview {
+  position:
+    relative;
+}
+
+.cardMediaBadge {
+  position:
+    absolute;
+
+  left:
+    8px;
+
+  bottom:
+    8px;
+
+  z-index:
+    3;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  min-height:
+    24px;
+
+  padding:
+    5px 8px;
+
+  border:
+    1px solid rgba(241, 237, 230, .34);
+
+  border-radius:
+    7px;
+
+  background:
+    rgba(45, 63, 33, .9);
+
+  color:
+    #f1ede6;
+
+  font-family:
+    "Montserrat",
+    var(--font-dana),
+    Arial,
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    .08em;
+
+  white-space:
+    nowrap;
+
+  box-shadow:
+    0 5px 12px rgba(45, 63, 33, .16);
+
+  backdrop-filter:
+    blur(5px);
+
+  pointer-events:
+    none;
+}
+
+/* TKB PRODUCT FORM FULL FA RTL V1 START */
+/* Shared create/edit form; keep the underlying data and controls intact. */
+.form {
+  direction: rtl;
+  text-align: right;
+  font-family: var(--font-dana), Tahoma, Arial, sans-serif;
+}
+.form .section,
+.form .sectionHead,
+.form .builderNav,
+.form .grid,
+.form .optionGrid,
+.form .attributeCreate,
+.form .attributeList,
+.form .variantList,
+.form .mediaList,
+.form .footer {
+  direction: rtl;
+}
+.form .sectionHead > p,
+.form .field label,
+.form .attributeHeader,
+.form .translationEditorHead,
+.form .emptyNote,
+.form .permissionNote,
+.form .uploadBox > span {
+  text-align: right;
+}
+.form :is(input, textarea, select):not([dir="ltr"]):not([type="number"]),
+.form .field label,
+.form .builderNav,
+.form .sectionHead,
+.form .formMessage {
+  font-family: var(--font-dana), Tahoma, Arial, sans-serif;
+}
+.form input[dir="ltr"],
+.form textarea[dir="ltr"],
+.form input[type="number"] {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+.form input[dir="rtl"],
+.form textarea[dir="rtl"] {
+  text-align: right;
+}
+.form .builderNav a:first-child {
+  border-right: 0;
+}
+.form .builderNav a:last-child {
+  border-right: 1px solid rgba(54, 39, 28, .06);
+}
+@media (max-width: 760px) {
+  .form .sectionHead > p {
+    text-align: right;
+  }
+}
+/* TKB PRODUCT FORM FULL FA RTL V1 END */
+
+/* TKB PRODUCT FORM COMPLETE FA RTL V3 START */
+/* Create/edit share this form: display direction only, never mutate field values. */
+.form {
+  direction: rtl;
+  text-align: right;
+}
+.form .sectionHead,
+.form .sectionHead > div,
+.form .attributeHeader,
+.form .translationSummary,
+.form .variantTop,
+.form .mediaTitle,
+.form .mediaActions,
+.form .footer {
+  direction: rtl;
+}
+.form .field label,
+.form .sectionHead > p,
+.form .permissionNote,
+.form .emptyNote,
+.form .formMessage {
+  text-align: right;
+}
+.form input[dir="ltr"],
+.form textarea[dir="ltr"],
+.form input[type="number"] {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+.form input[dir="rtl"],
+.form textarea[dir="rtl"] {
+  text-align: right;
+}
+/* TKB PRODUCT FORM COMPLETE FA RTL V3 END */
+/* TKB MEDIA FILE PICKER FA V1 */
+/* Visually hidden, but still focusable and fully functional. */
+.uploadBox {
+  position: relative;
+  flex-wrap: wrap;
+}
+.mediaFileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.mediaPickerLabel {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #6d705b;
+  border-radius: 11px;
+  background: #6d705b;
+  color: #fffefa;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.mediaFileInput:focus-visible + .mediaPickerLabel {
+  outline: 2px solid #2d3f21;
+  outline-offset: 3px;
+}
+.mediaPickerLabel[aria-disabled="true"] {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+/* TKB MEDIA FILE PICKER FA V1 END */

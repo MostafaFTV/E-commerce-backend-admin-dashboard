@@ -1,0 +1,49 @@
+[
+  {
+    "id": "MT-COOKWARE-01",
+    "goal": "cookware needs, correction, comparison, exact specification",
+    "turns": [
+      {"message": "برای خانواده ۴ نفره قابلمه می‌خوام سبک و بادوام باشه", "locale": "fa", "skill": "discovery", "preferences": {"household_size":"4", "cookware_priorities":"lightweight,durable"}},
+      {"message": "اجاقم برقی صفحه‌ایه", "locale": "fa", "skill": null, "preferences": {"hob_type":"electric_flat", "household_size":"4"}},
+      {"message": "بین این دو قابلمه کدوم بهتره؟", "locale": "fa", "skill": "comparison", "preferences": {"hob_type":"electric_flat", "household_size":"4"}},
+      {"message": "وزن دقیق مدل چقدره؟", "locale": "fa", "skill": "exact_spec", "preferences": {"hob_type":"electric_flat", "household_size":"4"}},
+      {"message": "نه، اجاق گازی دارم", "locale": "fa", "skill": null, "preferences": {"hob_type":"gas", "household_size":"4"}}
+    ]
+  },
+  {
+    "id": "MT-DRINK-02",
+    "goal": "explicit correction from coffee to tea without losing kitchen constraints",
+    "turns": [
+      {"message":"آشپزخانه کوچیک دارم و یه چیز جمع‌وجور برای نوشیدنی می‌خوام", "locale":"fa", "skill":"discovery", "preferences":{"kitchen_space":"small","product_size":"compact","usage":"drinks"}},
+      {"message":"قهوه", "locale":"fa", "skill":null, "preferences":{"drink_type":"coffee","product_size":"compact"}},
+      {"message":"نه، چای", "locale":"fa", "skill":null, "preferences":{"drink_type":"tea","kitchen_space":"small"}}
+    ]
+  },
+  {
+    "id":"MT-ENGLISH-03",
+    "goal":"language switch, budget sensitivity, and priority change",
+    "turns":[
+      {"message":"I need a compact coffee maker", "locale":"en", "skill":"discovery", "preferences":{"drink_type":"coffee","product_size":"compact"}},
+      {"message":"My budget is limited", "locale":"en", "skill":"budget", "preferences":{"drink_type":"coffee","product_size":"compact"}},
+      {"message":"کدوم بهتره؟", "locale":"fa", "skill":"comparison", "preferences":{"drink_type":"coffee","product_size":"compact"}}
+    ]
+  },
+  {
+    "id":"MT-COMPLAINT-04",
+    "goal":"complaint and purchase requests change the selected skill",
+    "turns":[
+      {"message":"دنبال ظرف سرو برای خانواده هستم", "locale":"fa", "skill":"discovery", "preferences":{}},
+      {"message":"دوباره می‌پرسید؟ قبلاً جواب دادم", "locale":"fa", "skill":"complaint", "preferences":{}},
+      {"message":"چطور سفارش بدم؟", "locale":"fa", "skill":"purchase", "preferences":{}}
+    ]
+  },
+  {
+    "id":"MT-HISTORY-05",
+    "goal":"latest user turn controls skill even when older turns include skill triggers",
+    "turns":[
+      {"message":"قیمت این محصول چنده؟", "locale":"fa", "skill":"budget", "preferences":{}},
+      {"message":"بین این دو مدل چه فرقی هست؟", "locale":"fa", "skill":"comparison", "preferences":{}},
+      {"message":"وزن دقیقش چقدره؟", "locale":"fa", "skill":"exact_spec", "preferences":{}}
+    ]
+  }
+]

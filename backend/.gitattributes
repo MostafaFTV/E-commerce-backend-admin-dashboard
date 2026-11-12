@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+storage/app/public/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+storage/app/public/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+storage/app/public/**/*.png filter=lfs diff=lfs merge=lfs -text
+storage/app/public/**/*.webp filter=lfs diff=lfs merge=lfs -text
+storage/app/public/**/*.avif filter=lfs diff=lfs merge=lfs -text
